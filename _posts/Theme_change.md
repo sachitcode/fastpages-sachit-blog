@@ -1,9 +1,0 @@
----
-toc: true
-layout: post
-description: Theme Change
-categories: [markdown]
-title: Theme Change
----
-
-![Theme](https://github.com/sachitcode/fastpages-sachit-blog/blob/e536756a2294769004ac76c811c8f6c053c69f9f/images/Theme.png)
