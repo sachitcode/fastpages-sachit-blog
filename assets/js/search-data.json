@@ -90,8 +90,8 @@
   
     
         ,"post8": {
-            "title": "Table Post",
-            "content": "Week Sprint AP Test Prep Career Tech Canvas . 3 | Creative Development | Create Performance Task, How I got a 5! | JavaScript Tutorial, Program Design with AppLab | TBD | . 2 | Data Abstraction | Python Lists and Dictionaries | Agile and Roles, HTML Fragments and Layouts | TBD | . 1 | Introduction to Python | Hello to Python, Reflections on Computer Science | Bash and Checks, Fastpages, Jupyter Notebooks, Markdown, Focus and Habits | Intro Python, Jupyter, Fastpages | . 0 | Tool Setup | Scoring History, Pseudo Code | Tools and Equipment | Tools Setup | .",
+            "title": "This post shows what I have done each week.",
+            "content": "Week Sprint Review Ticket Summary . 3 | Creative Development | Create Performance Task, How I got a 5! | Not Started Yet | . 2 | Data Abstraction | Python Lists and Dictionaries | In this week, I learned about HTML fragments and dictionaries in python. I was able to reverse a dictionary, add items to a dictionary, and make a quiz using a dictionary! | . 1 | Introduction to Python | Hello to Python, Reflections on Computer Science | In this week, I became more familiar with creating markdown posts and Jupyter notebooks. I also learned more about the language bash. | . 0 | Tool Setup | Review Ticket, | In this week, I installed all the things needed for this class including Python, Vscode, Anaconda, etc. I also learned how to make a blog using fastpages.&lt;/td&gt; .",
             "url": "https://sachitcode.github.io/fastpages-sachit-blog/markdown/2020/09/02/Table_Post.html",
             "relUrl": "/markdown/2020/09/02/Table_Post.html",
             "date": " • Sep 2, 2020"
