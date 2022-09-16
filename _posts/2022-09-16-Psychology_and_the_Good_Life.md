@@ -26,13 +26,13 @@ title: "Laurie Santos: Psychology and the Good Life"
 
 - Laurie Santos created this course to help students understand and deal with stress and anxiety in college
 - There were two parts to the Psychology and the Good Life Course:
-    - 1. Understanding positive psychology and how to make the positive changes in your life
-    - 2. Actually practicing the good habits (this is important because it's one thing to understand what you should be doing to improve your mental health, but it's another to actually implement the key ideas into your own life)
+    - Understanding positive psychology and how to make the positive changes in your life
+    - Actually practicing the good habits (this is important because it's one thing to understand what you should be doing to improve your mental health, but it's another to actually implement the key ideas into your own life)
 - This course performed so well that it became the most popular course at Yale.
-    - the reason why this course performed so well was because many students were having trouble dealing with their stress and anxiety
+    - The reason why this course performed so well was because many students were having trouble dealing with their stress and anxiety
 - Important insights that students can take away from the course:
-    - 1. Your level of well being can be improved through the correct practices and measures taken to improve it.
-    - 2. We think that our life circumstances (such as occupation and salary) matter a lot, but they don't matter nearly as much as we think
-    - 3. Sleep is very important for brain development and well being (and high school and college students aren't getting enough)
-    - 4. It's important to be aware of the present moment because it enables you to notice and enjoy the good things in your life. This can be practiced with practices like meditation.
-    - 5. It's important to prioritize time over money
+    - Your level of well being can be improved through the correct practices and measures taken to improve it.
+    - We think that our life circumstances (such as occupation and salary) matter a lot, but they don't matter nearly as much as we think
+    - Sleep is very important for brain development and well being (and high school and college students aren't getting enough)
+    - It's important to be aware of the present moment because it enables you to notice and enjoy the good things in your life. This can be practiced with practices like meditation.
+    - It's important to prioritize time over money
