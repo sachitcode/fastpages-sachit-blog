@@ -8,7 +8,7 @@ title: "Program Function and Purpose"
 
 ## Computing Innovations
 
-    - A computing innovation is an 
+- A computing innovation is an that includes a computer or program code as an essential part of its functionality.
 - Categories of computing innovations:
     - Applications (games, social media, etc.)
     - Physical Devices (computers, smart phones, etc.)
