@@ -51,3 +51,5 @@ title: "Program Function and Purpose"
 ## MCQ Questions
 
 I have completed the assigned MCQ questions for this week.
+
+![]({{site.baseurl}}/images/Week5Quiz.png "https://github.com/fastai/fastpages")
