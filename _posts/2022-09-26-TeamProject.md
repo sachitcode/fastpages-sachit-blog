@@ -8,7 +8,7 @@ title: "Team Project Post"
 
 ## Agile Methodology Diagram:
 
-![]({{site.baseurl}}/images/agilediagram.png "Agile Methodology Diagram created by my team and I.")
+![]({{site.baseurl}}/images/scrumdiagram.png "Agile Methodology Diagram created by my team and I.")
 
 ## Team Roles:
 
