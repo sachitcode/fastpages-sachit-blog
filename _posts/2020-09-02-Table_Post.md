@@ -17,14 +17,18 @@ title: Time Box Fragment Post
     <tr>
         <td>3</td>
         <td><a href="{{site.baseurl}}/week/3">Creative Development</a></td>
-        <td>No Review Ticket Yet</td>
-        <td>Not Started Yet</td>
+        <td>
+            <a href="https://github.com/nighthawkcoders/APCSP/issues/33#issuecomment-1246002456">Review Ticket</a>
+        </td>
+        <td>In this week, I created my idea for the create performance task part of the AP exam. I also was able to create a quiz using App Lab.</td>
     </tr>
 
     <tr>
         <td>2</td>
         <td><a href="{{site.baseurl}}/week/2">Data Abstraction</a></td>
-        <td>No Review Ticket Yet</td>
+        <td>
+            <a href="https://github.com/nighthawkcoders/APCSP/issues/22#issuecomment-1238673039">Review Ticket</a>
+        </td>
         <td>In this week, I learned about HTML fragments and dictionaries in python. I was able to reverse a dictionary, add items to a dictionary, and make a quiz using a dictionary!</td>
     </tr>
 
