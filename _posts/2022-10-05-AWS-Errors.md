@@ -8,7 +8,7 @@ title: "AWS Errors and Challenges"
 
 # Why I wasn't able to complete AWS requirements for this week:
 
-The main error that I wasn't able to get past was with running the command "sudo docker-compose up -d". When I ran this command, I received a parsing error which means that the software can't understand what i'm trying to do. This means that there is either something wrong with my formatting or the code.
+The main error that I wasn't able to get past was with running the command "sudo docker-compose up -d". When I ran this command, I received a parsing error which means that the software can't understand what I'm trying to do. This means that there is either something wrong with my formatting or the code.
 
 ## Checking for Formatting Issues:
 
@@ -26,4 +26,4 @@ To check for mistakes in my code, I made sure to copy the correct template for t
 
 ## Asking Teacher for Help:
 
-When I asked Mr Yeung for help, he told me to use the "sudo nano config,yml" command to edit the config.yml file and fix any problems in the code without using VSCode. Unfortunately, I wasn't able to get my problem resolved because class was ending and he needed to leave.
+When I asked Mr Yeung for help, he told me to use the "sudo nano config.yml" command to edit the config.yml file and fix any problems in the code without using VSCode. Unfortunately, I wasn't able to get my problem resolved because class was ending and he needed to leave.
