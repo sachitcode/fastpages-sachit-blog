@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -125,6 +125,12 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="My-team's-project-is-a-program-that-contains-features-similar-to-the-clock-app-on-iphone.-Some-of-these-features-include-an-alarm,-stopwatch,-timezones-for-different-locations-(and-current-location),-and-most-importantly,-the-current-time.">My team's project is a program that contains features similar to the clock app on iphone. Some of these features include an alarm, stopwatch, timezones for different locations (and current location), and most importantly, the current time.<a class="anchor-link" href="#My-team's-project-is-a-program-that-contains-features-similar-to-the-clock-app-on-iphone.-Some-of-these-features-include-an-alarm,-stopwatch,-timezones-for-different-locations-(and-current-location),-and-most-importantly,-the-current-time."> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -144,13 +150,6 @@ window.onload = wrap_img;
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="c1"># End Rapid API Code</span>
-<span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  <span class="c1"># convert response to python json object</span>
-
-<span class="c1"># Observe data from an API.  This is how data transports over the internet in a &quot;JSON&quot; text form</span>
-<span class="c1"># - The JSON &quot;text&quot; is formed in dictionary {} and list [] divisions</span>
-<span class="c1"># - To read the result, Data Scientist of  Developer converts JSON into human readable form</span>
-<span class="c1"># - Review the first line, look for the keys --  &quot;status&quot; and &quot;data&quot;</span>
 </pre></div>
 
     </div>
@@ -164,8 +163,8 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>abbreviation: PDT
-client_ip: 35.162.152.183
-datetime: 2022-10-12T09:21:10.558247-07:00
+client_ip: 52.38.28.241
+datetime: 2022-10-12T22:27:16.471708-07:00
 day_of_week: 3
 day_of_year: 285
 dst: true
@@ -174,65 +173,11 @@ dst_offset: 3600
 dst_until: 2022-11-06T09:00:00+00:00
 raw_offset: -28800
 timezone: America/Los_Angeles
-unixtime: 1665591670
-utc_datetime: 2022-10-12T16:21:10.558247+00:00
+unixtime: 1665638836
+utc_datetime: 2022-10-13T05:27:16.471708+00:00
 utc_offset: -07:00
 week_number: 41
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">JSONDecodeError</span>                           Traceback (most recent call last)
-File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/requests/models.py:971</span>, in <span class="ansi-cyan-fg">Response.json</span><span class="ansi-blue-fg">(self, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    970</span> try:
-<span class="ansi-green-fg">--&gt; 971</span>     return complexjson.loads(self.text, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    972</span> except JSONDecodeError as e:
-<span class="ansi-green-intense-fg ansi-bold">    973</span>     # Catch JSON-related errors and raise as requests.JSONDecodeError
-<span class="ansi-green-intense-fg ansi-bold">    974</span>     # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
-
-File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py:346</span>, in <span class="ansi-cyan-fg">loads</span><span class="ansi-blue-fg">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    343</span> if (cls is None and object_hook is None and
-<span class="ansi-green-intense-fg ansi-bold">    344</span>         parse_int is None and parse_float is None and
-<span class="ansi-green-intense-fg ansi-bold">    345</span>         parse_constant is None and object_pairs_hook is None and not kw):
-<span class="ansi-green-fg">--&gt; 346</span>     return _default_decoder.decode(s)
-<span class="ansi-green-intense-fg ansi-bold">    347</span> if cls is None:
-
-File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py:337</span>, in <span class="ansi-cyan-fg">JSONDecoder.decode</span><span class="ansi-blue-fg">(self, s, _w)</span>
-<span class="ansi-green-intense-fg ansi-bold">    333</span> &#34;&#34;&#34;Return the Python representation of ``s`` (a ``str`` instance
-<span class="ansi-green-intense-fg ansi-bold">    334</span> containing a JSON document).
-<span class="ansi-green-intense-fg ansi-bold">    335</span> 
-<span class="ansi-green-intense-fg ansi-bold">    336</span> &#34;&#34;&#34;
-<span class="ansi-green-fg">--&gt; 337</span> obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-<span class="ansi-green-intense-fg ansi-bold">    338</span> end = _w(s, end).end()
-
-File <span class="ansi-green-fg">/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py:355</span>, in <span class="ansi-cyan-fg">JSONDecoder.raw_decode</span><span class="ansi-blue-fg">(self, s, idx)</span>
-<span class="ansi-green-intense-fg ansi-bold">    354</span> except StopIteration as err:
-<span class="ansi-green-fg">--&gt; 355</span>     raise JSONDecodeError(&#34;Expecting value&#34;, s, err.value) from None
-<span class="ansi-green-intense-fg ansi-bold">    356</span> return obj, end
-
-<span class="ansi-red-fg">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-fg">JSONDecodeError</span>                           Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In [25], line 15</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span> print(response.text)
-<span class="ansi-green-intense-fg ansi-bold">     14</span> # End Rapid API Code
-<span class="ansi-green-fg">---&gt; 15</span> json = response.json()
-
-File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/requests/models.py:975</span>, in <span class="ansi-cyan-fg">Response.json</span><span class="ansi-blue-fg">(self, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    971</span>     return complexjson.loads(self.text, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    972</span> except JSONDecodeError as e:
-<span class="ansi-green-intense-fg ansi-bold">    973</span>     # Catch JSON-related errors and raise as requests.JSONDecodeError
-<span class="ansi-green-intense-fg ansi-bold">    974</span>     # This aliases json.JSONDecodeError and simplejson.JSONDecodeError
-<span class="ansi-green-fg">--&gt; 975</span>     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
-
-<span class="ansi-red-fg">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)</pre>
 </div>
 </div>
 
