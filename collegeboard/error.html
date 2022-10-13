@@ -562,15 +562,15 @@ window.onload = wrap_img;
         <span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
         <span class="n">subtotal</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">items</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please enter a valid item listed on the menu.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">items</span> <span class="o">+</span> <span class="s2">&quot; is not an item listed on the menu. Please enter a valid item.&quot;</span><span class="p">)</span>
 
 <span class="n">subtotal</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">subtotal</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">total</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">subtotal</span> <span class="o">*</span> <span class="mf">0.07</span> <span class="o">+</span> <span class="n">subtotal</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">subtotal</span> <span class="o">*</span> <span class="mf">0.0775</span> <span class="o">+</span> <span class="n">subtotal</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1">#code should add the price of the menu items selected by the user </span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Subtotal: $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">subtotal</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tax: 7%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tax: 7.75%&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total: $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 </pre></div>
 
@@ -598,13 +598,13 @@ burger
 drink
 salad
 fries
-Please enter a valid item listed on the menu.
+asldfkjasdlf is not an item listed on the menu. Please enter a valid item.
 
 Thank you for ordering!
 
 Subtotal: $9.96
-Tax: 7%
-Total: $10.66
+Tax: 7.75%
+Total: $10.73
 </pre>
 </div>
 </div>
