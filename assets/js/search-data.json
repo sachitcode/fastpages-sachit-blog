@@ -36,9 +36,9 @@
     
         ,"post3": {
             "title": "Project Related API",
-            "content": "My team&#39;s project is a program that contains features similar to the clock app on iphone. Some of these features include an alarm, stopwatch, timezones for different locations (and current location), and most importantly, the current time. . import requests url = &quot;https://world-time2.p.rapidapi.com/ip/75.6.164.211.txt&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;f56b20ef1cmsh82a127be1b400c6p1e21bcjsn093efcf02b8f&quot;, &quot;X-RapidAPI-Host&quot;: &quot;world-time2.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.text) . abbreviation: PDT client_ip: 52.38.28.241 datetime: 2022-10-12T22:27:16.471708-07:00 day_of_week: 3 day_of_year: 285 dst: true dst_from: 2022-03-13T10:00:00+00:00 dst_offset: 3600 dst_until: 2022-11-06T09:00:00+00:00 raw_offset: -28800 timezone: America/Los_Angeles unixtime: 1665638836 utc_datetime: 2022-10-13T05:27:16.471708+00:00 utc_offset: -07:00 week_number: 41 .",
-            "url": "https://sachitcode.github.io/fastpages-sachit-blog/2022/10/11/api.html",
-            "relUrl": "/2022/10/11/api.html",
+            "content": "import requests url = &quot;https://world-time2.p.rapidapi.com/ip/75.6.164.211.txt&quot; headers = { &quot;X-RapidAPI-Key&quot;: &quot;f56b20ef1cmsh82a127be1b400c6p1e21bcjsn093efcf02b8f&quot;, &quot;X-RapidAPI-Host&quot;: &quot;world-time2.p.rapidapi.com&quot; } response = requests.request(&quot;GET&quot;, url, headers=headers) print(response.text) . abbreviation: PDT client_ip: 52.38.28.241 datetime: 2022-10-12T22:27:16.471708-07:00 day_of_week: 3 day_of_year: 285 dst: true dst_from: 2022-03-13T10:00:00+00:00 dst_offset: 3600 dst_until: 2022-11-06T09:00:00+00:00 raw_offset: -28800 timezone: America/Los_Angeles unixtime: 1665638836 utc_datetime: 2022-10-13T05:27:16.471708+00:00 utc_offset: -07:00 week_number: 41 .",
+            "url": "https://sachitcode.github.io/fastpages-sachit-blog/firstapi/",
+            "relUrl": "/firstapi/",
             "date": " • Oct 11, 2022"
         }
         
