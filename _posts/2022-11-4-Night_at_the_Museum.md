@@ -1,12 +1,12 @@
 ---
 toc: true
 layout: post
-description: My experience at Night of the Museum.
+description: My experience at Night at the Museum.
 categories: [markdown]
-title: "Night of the Museum"
+title: "Night at the Museum"
 ---
 
-### In this blog post, I will share some of my experiences at Night of the Museum.
+### In this blog post, I will share some of my experiences at Night at the Museum.
 
 The first class I explored was 3D animation. The projects displayed where scenes created by students related to donuts. The requirement for this project was that every image had to contain a donut in some way. The image I found most fascinating was the holographic donut. Here is a picture of it:
 
