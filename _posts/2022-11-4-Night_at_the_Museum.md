@@ -32,7 +32,7 @@ Lastly, I also was able to ask another group about what their project is about a
 
 ### Goals for Next Trimester
 
-1. I want to learn about many new things that seem interesting to me.
-2. I want to be more productive with my work during class time.
-3. I want to be able to ask more questions in class to get my questions clarified.
-4. I want to participate in more extra credit opportunities.
+- I want to learn about many new things that seem interesting to me.
+- I want to be more productive with my work during class time.
+- I want to be able to ask more questions in class to get my questions clarified.
+- I want to participate in more extra credit opportunities.
