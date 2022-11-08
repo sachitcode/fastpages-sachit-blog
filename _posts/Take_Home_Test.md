@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: My experience at Night at the Museum.
+description: Take home test reflection.
 categories: [markdown]
 title: "Take Home Test Reflection"
 ---
