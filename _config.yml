@@ -37,7 +37,7 @@ url: "https://sachitcode.github.io" # the base hostname & protocol for your site
 baseurl: "/fastpages-sachit-blog" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-# minima:
+minima:
   # social_links:
   #   twitter: fastdotai
   #   github: fastai
