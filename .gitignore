@@ -12,3 +12,11 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+_posts/2020-02-20-test.md
+.gitignore
+_posts/2022-08-22-Sachit_Jupyter_notebook.md
+_posts/2022-08-28-Hello,-this-is-my-docx-file-post.md
+_posts/2022-08-28-sachit-bashnotebook.md
+_posts/2022-08-29-ClassesWork.md
+_posts/2022-08-29-Python_Quiz.md
+_posts/2022-09-05-InfoDb.md
