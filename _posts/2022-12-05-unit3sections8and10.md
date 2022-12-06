@@ -1,8 +1,9 @@
 ---
-title: Your Homework
-comments: true
-permalink: /homework
+toc: true
 layout: post
+description: Homework for Unit 3 Sections 8 and 10.
+categories: [markdown]
+title: "Unit 3 Sections 8 and 10 Hacks"
 ---
 
 # What you need to do
@@ -19,6 +20,7 @@ Screenshot of question I got wrong:
 
 ![]({{site.baseurl}}/images/incorrectq9.png "Here is the question I answered incorrectly.")
 
+Reflecting on what I learned: While taking this multiple choice quiz, I used what I had learned from your presentation on sections 8 and 10 to get almost all the questions correct. The only question I got wrong was question 9 which asked "I want to iterate over a list until the user inputs 'quit'. What loop would I use?". I still don't understand why the answer to this question is "FOR loops" because since the loop will iterate over a list until the user inputs 'quit', this represents a while loop because the loop ends when a condition is met. A for loop would make sense for a situation where something is repeated a certain number of times.
 
 ## Submit your **Clean** and consolidated review tickets here in the format:
 - Name (First Last): [Link](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
