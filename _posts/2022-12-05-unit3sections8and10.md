@@ -10,7 +10,12 @@ title: "Unit 3 Sections 8 and 10 Hacks"
 ### [Exercises](https://pgk-lang.github.io/pgk/exercises)
  1. Complete the exercises and add screenshots of your completed code to your blog
    - Reflect on what you learned
- 
+
+![]({{site.baseurl}}/images/exercise1.png "Exercise 1 Code.")
+![]({{site.baseurl}}/images/exercise2.png "Exercise 2 Code.")
+
+Through these exercises, I learned how to reverse a list by adding the elements of the list to another list in reverse order. I also learned how to use bubble sort to sort a list.
+
 ### [Multiple Choice quiz](https://pgk-lang.github.io/pgk/quiz)
  1. Complete the quiz and add screenshots of the questions you got wrong to your blog
    - Reflect on what you learned
