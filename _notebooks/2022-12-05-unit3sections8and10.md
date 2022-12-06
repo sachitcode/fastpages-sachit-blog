@@ -15,5 +15,10 @@ layout: post
    - Reflect on what you learned
    - If you got everything correct, look at the [javascript code](https://raw.githubusercontent.com/PGK-Lang/pgk/master/_pages/01_quiz.md) used to create the quiz and explain how the use of lists and iteration helps to make the code more efficient 
 
+Screenshot of question I got wrong:
+
+![]({{site.baseurl}}/images/incorrectq9.png "Here is the question I answered incorrectly.")
+
+
 ## Submit your **Clean** and consolidated review tickets here in the format:
 - Name (First Last): [Link](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
