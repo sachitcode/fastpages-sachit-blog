@@ -15,8 +15,8 @@ Week 1 Table:
 
 Week 2 Table:
 
-|    | Unit 3 Sections 5 - 7  | Unit 3 Sections 8 and 10 |
+|    | Unit 3 Sections 8 and 10 |
 | ----------- | ----------- | ----------- |
-| Score    | 1       |  0.9    |
-| What I Learned and Practiced | In unit 3 sections 5 - 7, there were more problems about converting from binary to decimal and vice versa. We also learned about Not operator, AND operator, and OR operator truth tables. We also learned how to make a flowchart to represent a situation. We also learned how to create dictionaries.   |  In unit 3 sections 8 and 10, I was able to use bubble sort to sort a list. I also learned how to reverse a list without using the already made reverse function in python. I also learned about while and for loops and the difference between them.|
+| Score    | 0.9    |
+| What I Learned and Practiced | In unit 3 sections 8 and 10, I was able to use bubble sort to sort a list. I also learned how to reverse a list without using the already made reverse function in python. I also learned about while and for loops and the difference between them.|
 
