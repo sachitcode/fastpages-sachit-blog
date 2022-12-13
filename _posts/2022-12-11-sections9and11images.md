@@ -13,3 +13,7 @@ title: "Unit 3 Sections 9 and 11 Images"
 ### Question 6:
 
 ![]({{site.baseurl}}/images/nottree.png "Diagram for 1, 2, 3, 4, 6, 9, 11, 69")
+
+### Question 9:
+
+![]({{site.baseurl}}/images/tree2.png "Binary Search Tree for 64, 36, 16, 11, 9")
