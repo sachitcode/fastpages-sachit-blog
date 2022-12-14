@@ -12,7 +12,7 @@ Mission Statements
 
 - HP Inc: Create technology that makes life better for everyone, every where
 - Qualcomm: Investing the tech the world loves
-- Both mention that they want to create technology that makes life better for the world
+    -  Both mention that they want to create technology that makes life better for the world
 
 - Important skill to have in tech industry:
     - Continuous learning: Ability to learn new things and being able to adapt to changes.
