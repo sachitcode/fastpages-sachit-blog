@@ -8,7 +8,7 @@ title: "Performance Task Submissions Scoring"
 
 ### Submission 1
 
-|    | Category | My Score | College Board Score | My Comments |
+| Category | My Score | College Board Score | My Comments |
 | ----------- | ----------- | ----------- | ----------- |
 | Row 1: Program Purpose and Function  | 0/1    | 0/1    | They explained the functionality and purpose of their code. These were also shown in the video. However, the student describes the functionality of their program similarly to how they describe its purpose.    |
 | Row 2: Data Abstraction  | 1/1    | 1/1    | The student states in their written response that there is a list containing all possible triangle types and a specific element is called from the list using the side lengths of the inputted triangle.    |
@@ -20,7 +20,7 @@ title: "Performance Task Submissions Scoring"
 
 ### Submission 2
 
-|    | Category | My Score | College Board Score | Comments |
+| Category | My Score | College Board Score | Comments |
 | ----------- | ----------- | ----------- | ----------- |
 | Row 1: Program Purpose and Function  | /1    | /1    |     |
 | Row 2: Data Abstraction  | /1    | /1    |     |
