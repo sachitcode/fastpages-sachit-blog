@@ -10,7 +10,7 @@ title: "Performance Task Submissions Scoring 2"
 
 | Category | My Score | College Board Score | My Comments |
 | ----------- | ----------- | ----------- | ----------- |
-| Row 1: Program Purpose and Function  | 0/1    | 0/1    | Even though the written response includes     |
+| Row 1: Program Purpose and Function  | 0/1    | 0/1    | Even though the written response and the video include the inputs and outputs of the program, the purpose of the program is not explained.     |
 | Row 2: Data Abstraction  | 1/1    | 0/1    | The student's list has more than one item and it serves an important purpose in the program. This purpose is also explained in the written response.    |
 | Row 3: Managing Complexity  | 0/1    | 0/1    | The written response states that the list makes the program more complex.    |
 | Row 4: Procedural Abstraction  | 1/1    | 0/1    | The student included a function from their code in the written response that takes in 1 parameter. The student also shows that it's called later in the program. The student describes the functionality of the program.    |
