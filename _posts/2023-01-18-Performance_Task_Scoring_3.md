@@ -57,18 +57,12 @@ Just like last time, I think I did a good job grading these performance tasks. I
 
 ### Submission 4
 
-<!-- | Category | My Score | College Board Score | My Comments |
+| Category | My Score | College Board Score | My Comments |
 | ----------- | ----------- | ----------- | ----------- |
-| Row 1: Program Purpose and Function  | 1/1    | 1/1    | <ul><li>[x] item1</li><li>[ ] item2</li></ul>
+| Row 1: Program Purpose and Function  | 1/1    | 1/1    | <input type="checkbox" disabled checked /> item 1
+<input type="checkbox" disabled /> item 2
 | Row 2: Data Abstraction  | 0/1    | 0/1    | The list shown includes more than one element, but the written response doesn't include how it fulfills the program's purpose.    |
 | Row 3: Managing Complexity  | 1/1    | 0/1    | The written response explains how the list manages complexity and gives us a different approach for the algorithm that would be less efficient and wouldn't use the list.    |
 | Row 4: Procedural Abstraction  | 1/1    | 1/1    | The student developed procedure shown in the written response contains at least one parameter and shows where it is called. The written response also explains how the procedure adds to the program's overall functionality.    |
 | Row 5: Algorithm Implementation  | 1/1    | 1/1    | The written response includes an algorithm that has selection (with an if statement), iteration (with a for loop), and sequencing. The student also describes the algorithm in detailed steps.    |
-| Row 6: Testing  | 1/1    | 0/1    | The written response includes the two calls, the conditions being tested, and the outputs of each call.    | -->
-
-| Task           | Time required | Assigned to   | Current Status | Finished | 
-|----------------|---------------|---------------|----------------|-----------|
-| Calendar Cache | > 5 hours  |  | in progress | - [x] ok?
-| Object Cache   | > 5 hours  |  | in progress | [x] item1<br/>[ ] item2
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>- [x] item1</li><li>- [ ] item2</li></ul>
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>[x] item1</li><li>[ ] item2</li></ul>
+| Row 6: Testing  | 1/1    | 0/1    | The written response includes the two calls, the conditions being tested, and the outputs of each call.    |
