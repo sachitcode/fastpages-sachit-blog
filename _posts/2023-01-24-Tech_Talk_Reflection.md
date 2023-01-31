@@ -91,7 +91,7 @@ In my opinion paper does not limit digital empowerment. In fact, paper can be a 
 
 **1. Think of three beneficial effects of your projects based on 5.1 Unit**
 
-1. Our project offers the user with a list of building with their pictures and a descriptions about them, so people can decide where they want to travel to based on which building they want to visit.
+1. Our project offers the user with a list of buildings with their pictures and descriptions about them, so people can decide where they want to travel to based on which building they want to visit.
 2. Our project will make it easy for the user to plan their vacation to visit a famous building as we have many features that will accommodate for the user's every need.
 3. Different users who speak and understand different languages will be able to use our site with our translator.
 
