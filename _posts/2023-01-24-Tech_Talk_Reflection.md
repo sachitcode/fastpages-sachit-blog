@@ -106,3 +106,62 @@ Internet blockers at school are useful because they restrict students from going
 **4. What concerns do you have personally about the digital divide? For yourself or for others.**
 
 I wouldn't face many problems with the digital divide because I don't have many problems with my access to technology. I have all the technological resources I need to learn more about different topics and have access to all the other benefits of having technology. For others, however, who might not have as much access to technology, it will be hard for them to do much in a world that is mainly focused on technology. In this day and age, it's crucial to have access to technology.
+
+# Big Ideas 5.3 and 5.4:
+
+### Big Idea 5.3 Computing Bias
+
+**Intentional or Purposeful bias (Crossover Group Up, 10 minutes)**
+
+- TikTok is usually used by and marketed towards younger ages
+    - It attracts younger ages through the way the short videos capture the attention of these kids
+    - Also, the music and bright colors also help to captivate these audiences
+- Facebook is often used by older users as it is used more for communication rather than entertainment
+- People use facebook to share their life with others and learn about what others are doing and it's not as addicting as Tiktok
+    - TikTok is made to be addicting to young users with the way it recommends videos in a particular way that makes users want to watch more and more
+- Even though this addiction that TikTok can cause is harmful to the user of the app, it is what makes the company a lot of money
+- Since this app can be harmful to its users, I believe that it should be corrected and made to be not as addicting
+
+- Virtual assistants might have female voices because they are perceived as more trustworthy, soothing and pleasant 
+- Also, these voices might be used to attract male audiences
+- In these ways, this is definitely good business and had definitely helped these companies that create these virtual assistants
+- I also don't believe that the overuse of female voices in virtual assistants is harmful
+
+**Are HP Computers Racist?**
+
+I believe that the owner of the computer did not think this was intentional. I hypothesize that this happened with improper testing. I think that the majority of the testers of the camera were white and the camera wasn't tested by enough darker people to recognize them as people. To produce a better outcome, a wider range of people should be tested, so the camera would be able to detect everyone. It's imperative that this problem is corrected because this can cause a lot of problems and harm. It can even be emotionally hurtful as some people might question their humanity. 
+
+### Big Idea 5.4 Crowdsourcing
+
+**What is Crowdsourcing?**
+
+- Crowdsourcing is the practice of a lot of different people contributing information for a task or project
+- An example of crowdsourcing is different people contributing different information that comes together in a Wikipedia page
+
+**Evidence of Crowdsourcing**
+
+- Wikipedia is a major example of something that uses crowdsourcing
+    - Wikipedia works with many people contributing information on a single topic and this information coming together to form an article
+    - Sometimes this information can be inaccurate because even people who are inexperienced and not credible can add information to the page
+- For crypto currency, the 3 step validation of exchanges of money provided by 3 different miners is an example of crowdsourcing
+- For COVID data, different places can contribute their data about all the different aspects of this topic
+
+**Obtaining Data via Crowdsourcing**
+
+I mostly use APIs from RapidAPI because we learned about that last trimester. We learned about an API that contained COVID data and we learned how to convert the data into json format. For this project, I have also used 2 APIs (one to convert a city's name to its latitude and longitude coordinates and the other to use the latitude and longitude coordinates to find the nearest airport). In this project, I learned how to parse through the 2 APIs to get the data I am interested in.
+
+With Github, we can see other student's projects and see how they did certain things. For example, if someone highlighted something in their blog and I wanted to know how they did it, I could find their blog on Github and see how they did it. With this, it's possible to not only learn from the internet, but from other students as well.
+
+### 3.4 Hacks
+
+**1. CompSci has 150 ish principles students. Describe a crowdsource idea and how you might initiate it in our environment?**
+
+A crowdsourcing idea that we can use for CSP could be creating a big project with everyone inputting their own features. Since everyone in CSP know how to code at least something, we would be able to get many inputs and the project would come together well. Also, if people need help with the part of the project they are working on, they can ask another student for help. For our project, we can ask people about some buildings they want to visit so we can include them in our list of famous building and descriptions for them.
+
+2. **What about Del Norte crowdsourcing? Could your project be better with crowdsourcing?**
+
+The previous crowdsourcing project I mentioned probably wouldn't be better with the entire school, because inexperienced people might contribute work that makes the project worse. It's better for people who know what they are doing to contribute rather than people who don't. Since the idea I wrote about in the first question isn't related to CSP, we can ask anyone from Del Norte about famous building they want to visit.   
+
+3. **What kind of data could you capture at N@tM to make evening interesting? Perhaps use this data to impress Teachers during finals week.**
+
+At Night at the Museum, all of the pieces of our project would have come together. We can ask someone to input their current location and where they want to visit (based on the location of the building they want to visit). Then, with the Google API, we can show them their current location and their destination on a map. This will probably impress the teachers during finals week.
