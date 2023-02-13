@@ -176,7 +176,11 @@ Since public repositories on GitHub are often used for sharing open source softw
 
 2. In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
 
+I understand the need for patents and intellectual property rights - companies spend years and a lot of money on research and development to come out with products and solutions. The companies need to pay the salary to their employees as well as turn a profit - so protecting their work with royalty is necessary.
 
+Open Source community is extremely vital for us to be able to build on top of each other’s work. This way everyone doesn’t need to re-invent what has already been thought of and developed. It helps students like me, other software developers who don’t have a lot of resources, etc. I would also like to be a contributor to the open source community in the future. 
+
+I learnt about so many different type of licensing options in this class - some which are completely open to use and distribute, others which have restrictions on  derivative work, and so on. Common permissive licenses include the MIT License, Apache License, and BSD License. Popular copyleft ( method using which you can modify the software or documentation and distribute it back to the open-source community ) licenses include the GNU (General Public License) and the Mozilla Public License.
 
 3. Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
 
