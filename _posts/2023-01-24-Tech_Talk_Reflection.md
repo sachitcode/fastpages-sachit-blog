@@ -152,7 +152,7 @@ I mostly use APIs from RapidAPI because we learned about that last trimester. We
 
 With Github, we can see other student's projects and see how they did certain things. For example, if someone highlighted something in their blog and I wanted to know how they did it, I could find their blog on Github and see how they did it. With this, it's possible to not only learn from the internet, but from other students as well.
 
-### 3.4 Hacks
+### 5.4 Hacks
 
 **1. CompSci has 150 ish principles students. Describe a crowdsource idea and how you might initiate it in our environment?**
 
@@ -165,3 +165,47 @@ The previous crowdsourcing project I mentioned probably wouldn't be better with 
 3. **What kind of data could you capture at N@tM to make evening interesting? Perhaps use this data to impress Teachers during finals week.**
 
 At Night at the Museum, all of the pieces of our project would have come together. We can ask someone to input their current location and where they want to visit (based on the location of the building they want to visit). Then, with the Google API, we can show them their current location and their destination on a map. This will probably impress the teachers during finals week.
+
+# Big Ideas 5.5 and 5.6:
+
+### 5.5 Hacks
+
+1. When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
+
+Since public repositories on GitHub are often used for sharing open source software, GitHub displays license information to help users get information about open source licenses and the projects that use them. It's important for anyone who is creating a public repo to always update the right license. There are many different license types listed. Some examples include: Academic Free License v3.0, Apache license 2.0, GNU General Public License, Open Software License 3.0.
+
+2. In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+
+
+
+3. Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
+
+My personal blog used the Apache license 2.0 license. I was able to figure this out because it's the information about which license my blog is using is located in the "LICENSE" file. It seems that this is the default license used.
+
+In our CPT project, I have added a new LICENSE file and I selected MIT as the license. I looked on the internet and found that MIT is the most popular license used on GitHub. It is very simple and it gives users express permission to reuse code for any purposes.
+
+### 5.6 Hacks
+
+1. Describe PII you have seen on project in CompSci Principles.
+
+In my personal blog fastpages project, PII such as my name, school, and classes I am taking are listed. In our group project (RECS), the only example of PII is our names. These examples of PII are probably won't cause me any harm if others find this information.
+
+2. What are your feelings about PII and your personal exposure?
+
+I don't share a lot about my PII. I don't use social media and therefore don't share any personal information to the public. However, later on I might create social media account, but I will make sure not to publicize any information about myself that I wouldn't want people to find out (like my phone number, address, and date of birth).
+
+3. Describe good and bad passwords? What is another step that is used to assist in authentication.
+
+Good passwords are long and include different cases of characters, numbers, and symbols to ensure that the password can't be cracked easily. It's best to use a computer generated password (softwares such as Keychain) because these are designed to be strong. Sometimes multi - factor authentication is used to verify your identity by using multiple methods of authentication (such as a passcode, a key, a fingerprint).
+
+4. Try to describe Symmetric and Asymmetric encryption.
+
+Symmetric encryption is when one key is used to encrypt something and decrypt it. Some examples of these are AES, DES, and 3DES. Asymmetric encryption allows users to encrypt information using shared keys. Some examples of asymmetric encryption are RSA and DSS.
+
+5. Provide an example of encryption we used in AWS deployment.
+
+An example of encryption we used in AWS deployment is AES-256. This is another example of symmetric encryption that uses a 256-bit secret key for encryption and decryption
+
+6. Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques.
+
+Personally, I haven't fallen victim to any phishing schemes. However, I have seen several phishing emails claiming - that I have won a contest and I need to enter my information to collect the prize money, or that there is a package waiting for me which I never ordered, or that my insurance has expired and I need to renew it. It is important that we scan the emails and the address it is being sent from before clicking any links or giving out any PII in such links.
