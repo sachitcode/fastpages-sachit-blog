@@ -10,7 +10,7 @@ title: "Guide for Review"
 
 ### Frontend Function
 
-Overview: The function called getAirportName uses the city inputted by the user form the following sentence which is displayed to the user at the end of the function: "Nearest Aiport to City Name: Airport Name".
+Overview: The function called getAirportName uses the city inputted by the user form the following sentence which is displayed to the user at the end of the function: "Nearest Airport to City Name: Airport Name".
 
 [Link to File](https://github.com/raunak2007/RECS-repo/blob/gh-pages/nearest_airport.md?plain=1)
 
