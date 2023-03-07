@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.2 Data Compression, Images | Sachits Fastpages Project</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.2 Data Compression, Images" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression." />
+<meta property="og:description" content="Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression." />
+<link rel="canonical" href="https://sachitcode.github.io/fastpages-sachit-blog/2023/03/07/AP-unit2-2.html" />
+<meta property="og:url" content="https://sachitcode.github.io/fastpages-sachit-blog/2023/03/07/AP-unit2-2.html" />
+<meta property="og:site_name" content="Sachits Fastpages Project" />
+<meta property="og:image" content="https://sachitcode.github.io/fastpages-sachit-blog/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sachitcode.github.io/fastpages-sachit-blog/images/python.png" />
+<meta property="twitter:title" content="Unit 2.2 Data Compression, Images" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-07T00:00:00-06:00","datePublished":"2023-03-07T00:00:00-06:00","description":"Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression.","headline":"Unit 2.2 Data Compression, Images","image":"https://sachitcode.github.io/fastpages-sachit-blog/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://sachitcode.github.io/fastpages-sachit-blog/2023/03/07/AP-unit2-2.html"},"url":"https://sachitcode.github.io/fastpages-sachit-blog/2023/03/07/AP-unit2-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-sachit-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml" title="Sachits Fastpages Project" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-sachit-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-sachit-blog/">Sachits Fastpages Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages-sachit-blog/vocab/">Vocab</a><a class="page-link" href="/fastpages-sachit-blog/categories/">Tags</a><a class="page-link" href="/fastpages-sachit-blog/search/">Search</a><a class="page-link" href="/fastpages-sachit-blog/about/">About Me</a><a class="page-link" href="/fastpages-sachit-blog/submenu/">Submenu</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.2 Data Compression, Images</h1><p class="page-description">Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels.  College Board requires you to learn about Lossy and Lossless compression.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-07T00:00:00-06:00" itemprop="datePublished">
+        Mar 7, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      12 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/sachitcode/fastpages-sachit-blog/tree/master/_notebooks/2023-03-07-AP-unit2-2.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/sachitcode/fastpages-sachit-blog/master?filepath=_notebooks%2F2023-03-07-AP-unit2-2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/sachitcode/fastpages-sachit-blog/blob/master/_notebooks/2023-03-07-AP-unit2-2.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fsachitcode%2Ffastpages-sachit-blog%2Fblob%2Fmaster%2F_notebooks%2F2023-03-07-AP-unit2-2.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Enumerate-"Data"-Big-Idea-from-College-Board">Enumerate &quot;Data&quot; Big Idea from College Board </a></li>
+<li class="toc-entry toc-h2"><a href="#Image-Files-and-Size">Image Files and Size </a></li>
+<li class="toc-entry toc-h2"><a href="#Displaying-images-in-Python-Jupyter-notebook">Displaying images in Python Jupyter notebook </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#IPython">IPython </a></li>
+<li class="toc-entry toc-h3"><a href="#pathlib">pathlib </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Reading-and-Encoding-Images-(2-implementations-follow)">Reading and Encoding Images (2 implementations follow) </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#PIL-(Python-Image-Library)">PIL (Python Image Library) </a></li>
+<li class="toc-entry toc-h3"><a href="#base64">base64 </a></li>
+<li class="toc-entry toc-h3"><a href="#numpy">numpy </a></li>
+<li class="toc-entry toc-h3"><a href="#io,-BytesIO">io, BytesIO </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Data-Structures,-Imperative-Programming-Style,-and-working-with-Images">Data Structures, Imperative Programming Style, and working with Images </a></li>
+<li class="toc-entry toc-h2"><a href="#Data-Structures-and-OOP">Data Structures and OOP </a></li>
+<li class="toc-entry toc-h2"><a href="#Additionally,-review-all-the-imports-in-these-three-demos.--Create-a-definition-of-their-purpose,-specifically-these-...">Additionally, review all the imports in these three demos.  Create a definition of their purpose, specifically these ... </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-07-AP-unit2-2.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id='Enumerate-"Data"-Big-Idea-from-College-Board'>
+<a class="anchor" href="#Enumerate-" data aria-hidden="true"><span class="octicon octicon-link"></span></a>Enumerate "Data" Big Idea from College Board<a class="anchor-link" href="#Enumerate-%22Data%22-Big-Idea-from-College-Board"> </a>
+</h2>
+<blockquote>
+<p>Some of the big ideas and vocab that you observe, talk about it with a partner ...</p>
+<ul>
+<li>"Data compression is the reduction of the number of bits needed to represent data"</li>
+<li>"Data compression is used to save transmission time and storage space."</li>
+<li>"lossy data can reduce data but the original data is not recovered"</li>
+<li>"lossless data lets you restore and recover"</li>
+</ul>
+</blockquote>
+<p>The <a href="https://csp.nighthawkcodingsociety.com/starter/rgb/">Image Lab Project</a> contains a plethora of College Board Unit 2 data concepts. Working with Images provides many opportunities for compression and analyzing size.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Image-Files-and-Size">
+<a class="anchor" href="#Image-Files-and-Size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Files and Size<a class="anchor-link" href="#Image-Files-and-Size"> </a>
+</h2>
+<blockquote>
+<p>Here are some <a href="https://github.com/nighthawkcoders/nighthawk_csp/tree/master/starter/static/img">Images Files</a>.  Download these files, load them into <code>images</code> directory under <strong>_notebooks</strong> in your Blog.</p>
+<ul>
+<li><a href="https://github.com/nighthawkcoders/APCSP/blob/master/_notebooks/images/clouds-impression.png">Clouds Impression</a></li>
+<li><a href="https://github.com/nighthawkcoders/APCSP/blob/master/_notebooks/images/lassen-volcano.jpg">Lassen Volcano</a></li>
+<li><a href="https://github.com/nighthawkcoders/APCSP/blob/master/_notebooks/images/green-square-16.png">Green Square</a></li>
+</ul>
+</blockquote>
+<p>Describe some of the meta data and considerations when managing Image files.  Describe how these relate to Data Compression ...</p>
+<ul>
+<li>File Type, PNG and JPG are two types used in this lab</li>
+<li>Size, height and width, number of pixels</li>
+<li>Visual perception, lossy compression</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Displaying-images-in-Python-Jupyter-notebook">
+<a class="anchor" href="#Displaying-images-in-Python-Jupyter-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying images in Python Jupyter notebook<a class="anchor-link" href="#Displaying-images-in-Python-Jupyter-notebook"> </a>
+</h2>
+<blockquote>
+<p>Python Libraries and Concepts used for Jupyter and Files/Directories</p>
+</blockquote>
+<h3 id="IPython">
+<a class="anchor" href="#IPython" aria-hidden="true"><span class="octicon octicon-link"></span></a>IPython<a class="anchor-link" href="#IPython"> </a>
+</h3>
+<blockquote>
+<p>Support visualization of data in Jupyter notebooks.  Visualization is specific to View, for the web visualization needs to be converted to HTML.</p>
+</blockquote>
+<h3 id="pathlib">
+<a class="anchor" href="#pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>pathlib<a class="anchor-link" href="#pathlib"> </a>
+</h3>
+<blockquote>
+<p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
+<ul>
+<li>What are commands you use in terminal to access files?</li>
+<li>What are the command you use in Windows terminal to access files?</li>
+<li>What are some of the major differences?</li>
+</ul>
+</blockquote>
+<p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
+<ul>
+<li>Why is path a big deal when working with images?</li>
+<li>How does the meta data source and label relate to Unit 5 topics?</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f</span>
+
+<span class="c1"># prepares a series of images</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"images/"</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+    <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Clouds Impression"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"clouds-impression.png"</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Lassen Volcano"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"lassen-volcano.jpg"</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="c1"># File to open</span>
+        <span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">image</span><span class="p">[</span><span class="s1">'file'</span><span class="p">]</span>  <span class="c1"># file with path</span>
+    <span class="k">return</span> <span class="n">images</span>
+
+<span class="k">def</span> <span class="nf">image_display</span><span class="p">(</span><span class="n">images</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>  
+        <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]))</span>
+
+
+<span class="c1"># Run this as standalone tester to see sample data printed in Jupyter terminal</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="c1"># print parameter supplied image</span>
+    <span class="n">green_square</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">(</span><span class="n">images</span><span class="o">=</span><span class="p">[{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Internet"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Green Square"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"green-square-16.png"</span><span class="p">}])</span>
+    <span class="n">image_display</span><span class="p">(</span><span class="n">green_square</span><span class="p">)</span>
+    
+    <span class="c1"># display default images from image_data()</span>
+    <span class="n">default_images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    <span class="n">image_display</span><span class="p">(</span><span class="n">default_images</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [2], line 25</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span> if __name__ == "__main__":
+<span class="ansi-green-intense-fg ansi-bold">     23</span>     # print parameter supplied image
+<span class="ansi-green-intense-fg ansi-bold">     24</span>     green_square = image_data(images=[{'source': "Internet", 'label': "Green Square", 'file': "green-square-16.png"}])
+<span class="ansi-green-fg">---&gt; 25</span>     image_display(green_square)
+<span class="ansi-green-intense-fg ansi-bold">     27</span>     # display default images from image_data()
+<span class="ansi-green-intense-fg ansi-bold">     28</span>     default_images = image_data()
+
+Cell <span class="ansi-green-fg">In [2], line 18</span>, in <span class="ansi-cyan-fg">image_display</span><span class="ansi-blue-fg">(images)</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> def image_display(images):
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     for image in images:  
+<span class="ansi-green-fg">---&gt; 18</span>         display(Image(filename=image['filename']))
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:957</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    955</span> self.unconfined = unconfined
+<span class="ansi-green-intense-fg ansi-bold">    956</span> self.alt = alt
+<span class="ansi-green-fg">--&gt; 957</span> super(Image, self).__init__(data=data, url=url, filename=filename,
+<span class="ansi-green-intense-fg ansi-bold">    958</span>         metadata=metadata)
+<span class="ansi-green-intense-fg ansi-bold">    960</span> if self.width is None and self.metadata.get('width', {}):
+<span class="ansi-green-intense-fg ansi-bold">    961</span>     self.width = metadata['width']
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:327</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span> elif self.metadata is None:
+<span class="ansi-green-intense-fg ansi-bold">    325</span>     self.metadata = {}
+<span class="ansi-green-fg">--&gt; 327</span> self.reload()
+<span class="ansi-green-intense-fg ansi-bold">    328</span> self._check_data()
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:992</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    990</span> """Reload the raw data from file or URL."""
+<span class="ansi-green-intense-fg ansi-bold">    991</span> if self.embed:
+<span class="ansi-green-fg">--&gt; 992</span>     super(Image,self).reload()
+<span class="ansi-green-intense-fg ansi-bold">    993</span>     if self.retina:
+<span class="ansi-green-intense-fg ansi-bold">    994</span>         self._retina_shape()
+
+File <span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/IPython/core/display.py:353</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    351</span> if self.filename is not None:
+<span class="ansi-green-intense-fg ansi-bold">    352</span>     encoding = None if "b" in self._read_flags else "utf-8"
+<span class="ansi-green-fg">--&gt; 353</span>     with open(self.filename, self._read_flags, encoding=encoding) as f:
+<span class="ansi-green-intense-fg ansi-bold">    354</span>         self.data = f.read()
+<span class="ansi-green-intense-fg ansi-bold">    355</span> elif self.url is not None:
+<span class="ansi-green-intense-fg ansi-bold">    356</span>     # Deferred import
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'images/green-square-16.png'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-and-Encoding-Images-(2-implementations-follow)">
+<a class="anchor" href="#Reading-and-Encoding-Images-(2-implementations-follow)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading and Encoding Images (2 implementations follow)<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)"> </a>
+</h2>
+<h3 id="PIL-(Python-Image-Library)">
+<a class="anchor" href="#PIL-(Python-Image-Library)" aria-hidden="true"><span class="octicon octicon-link"></span></a>PIL (Python Image Library)<a class="anchor-link" href="#PIL-(Python-Image-Library)"> </a>
+</h3>
+<blockquote>
+<p><a href="https://pillow.readthedocs.io/en/stable/">Pillow or PIL</a> provides the ability to work with images in Python.  <a href="https://www.geeksforgeeks.org/working-images-python/?ref=lbp">Geeks for Geeks</a> shows some ideas on working with images.</p>
+</blockquote>
+<h3 id="base64">
+<a class="anchor" href="#base64" aria-hidden="true"><span class="octicon octicon-link"></span></a>base64<a class="anchor-link" href="#base64"> </a>
+</h3>
+<blockquote>
+<p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?</p>
+<ul>
+<li>Translate first 3 letters of your name to Base64.</li>
+</ul>
+</blockquote>
+<h3 id="numpy">
+<a class="anchor" href="#numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>numpy<a class="anchor-link" href="#numpy"> </a>
+</h3>
+<blockquote>
+<p><a href="https://numpy.org/">Numpy</a> is described as "The fundamental package for scientific computing with Python".  In the Image Lab, a Numpy array is created from the image data in order to simplify access and change to the RGB values of the pixels, converting pixels to grey scale.</p>
+</blockquote>
+<h3 id="io,-BytesIO">
+<a class="anchor" href="#io,-BytesIO" aria-hidden="true"><span class="octicon octicon-link"></span></a>io, BytesIO<a class="anchor-link" href="#io,-BytesIO"> </a>
+</h3>
+<blockquote>
+<p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
+<ul>
+<li>Where have you been a consumer of buffering?  </li>
+<li>From your consumer experience, what effects have you experienced from buffering?  </li>
+<li>How do these effects apply to images?</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Structures,-Imperative-Programming-Style,-and-working-with-Images">
+<a class="anchor" href="#Data-Structures,-Imperative-Programming-Style,-and-working-with-Images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures, Imperative Programming Style, and working with Images<a class="anchor-link" href="#Data-Structures,-Imperative-Programming-Style,-and-working-with-Images"> </a>
+</h2>
+<blockquote>
+<p>Introduction to creating meta data and manipulating images.  Look at each procedure and explain the the purpose and results of this program.  Add any insights or challenges as you explored this program.</p>
+<ul>
+<li>Does this code seem like a series of steps are being performed?</li>
+<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
+<li>Describe scale image?  What is before and after on pixels in three images?</li>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">pilImage</span> <span class="c1"># as pilImage is used to avoid conflicts</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># prepares a series of images</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"images/"</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+    <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Internet"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Green Square"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"green-square-16.png"</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Clouds Impression"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"clouds-impression.png"</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Lassen Volcano"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"lassen-volcano.jpg"</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="c1"># File to open</span>
+        <span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">image</span><span class="p">[</span><span class="s1">'file'</span><span class="p">]</span>  <span class="c1"># file with path</span>
+    <span class="k">return</span> <span class="n">images</span>
+
+<span class="c1"># Large image scaled to baseWidth of 320</span>
+<span class="k">def</span> <span class="nf">scale_image</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="n">baseWidth</span> <span class="o">=</span> <span class="mi">320</span>
+    <span class="n">scalePercent</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseWidth</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">scaleHeight</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">scalePercent</span><span class="p">)))</span>
+    <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="n">baseWidth</span><span class="p">,</span> <span class="n">scaleHeight</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+
+<span class="c1"># PIL image converted to base64</span>
+<span class="k">def</span> <span class="nf">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="nb">format</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">BytesIO</span><span class="p">()</span> <span class="k">as</span> <span class="n">buffer</span><span class="p">:</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+<span class="c1"># Set Properties of Image, Scale, and convert to Base64</span>
+<span class="k">def</span> <span class="nf">image_management</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted        </span>
+    <span class="c1"># Image open return PIL image object</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">pilImage</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">])</span>
+    
+    <span class="c1"># Python Image Library operations</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'format'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">format</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'mode'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">mode</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+    <span class="c1"># Scale the Image</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">scale_image</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'pil'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'scaled_size'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+    <span class="c1"># Scaled HTML</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'html'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'&lt;img src="data:image/png;base64,</span><span class="si">%s</span><span class="s1">"&gt;'</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'pil'</span><span class="p">],</span> <span class="n">image</span><span class="p">[</span><span class="s1">'format'</span><span class="p">])</span>
+    
+<span class="c1"># Create Grey Scale Base64 representation of Image</span>
+<span class="k">def</span> <span class="nf">image_management_add_html_grey</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="c1"># Image open return PIL image object</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="s1">'pil'</span><span class="p">]</span>
+    <span class="nb">format</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="s1">'format'</span><span class="p">]</span>
+    
+    <span class="n">img_data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>  <span class="c1"># Reference https://www.geeksforgeeks.org/python-pil-image-getdata/</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'data'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img_data</span><span class="p">)</span> <span class="c1"># PIL image to numpy array</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'gray_data'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># key/value for data converted to gray scale</span>
+
+    <span class="c1"># 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted</span>
+    <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">image</span><span class="p">[</span><span class="s1">'data'</span><span class="p">]:</span>
+        <span class="c1"># create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/</span>
+        <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># average pixel values and use // for integer division</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">image</span><span class="p">[</span><span class="s1">'gray_data'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span> <span class="c1"># PNG format</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image</span><span class="p">[</span><span class="s1">'gray_data'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">))</span>
+        <span class="c1"># end for loop for pixels</span>
+        
+    <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'gray_data'</span><span class="p">])</span>
+    <span class="n">image</span><span class="p">[</span><span class="s1">'html_grey'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'&lt;img src="data:image/png;base64,</span><span class="si">%s</span><span class="s1">"&gt;'</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+
+
+<span class="c1"># Jupyter Notebook Visualization of Images</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="c1"># Use numpy to concatenate two arrays</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    
+    <span class="c1"># Display meta data, scaled view, and grey scale for each image</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="n">image_management</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"---- meta data -----"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'label'</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'source'</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'format'</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'mode'</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Original size: "</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">'size'</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Scaled size: "</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="s1">'scaled_size'</span><span class="p">])</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-- original image --"</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'html'</span><span class="p">]))</span> 
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"--- grey image ----"</span><span class="p">)</span>
+        <span class="n">image_management_add_html_grey</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">'html_grey'</span><span class="p">]))</span> 
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [1], line 3</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> from IPython.display import HTML, display
+<span class="ansi-green-intense-fg ansi-bold">      2</span> from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+<span class="ansi-green-fg">----&gt; 3</span> from PIL import Image as pilImage # as pilImage is used to avoid conflicts
+<span class="ansi-green-intense-fg ansi-bold">      4</span> from io import BytesIO
+<span class="ansi-green-intense-fg ansi-bold">      5</span> import base64
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'PIL'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Structures-and-OOP">
+<a class="anchor" href="#Data-Structures-and-OOP" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures and OOP<a class="anchor-link" href="#Data-Structures-and-OOP"> </a>
+</h2>
+<blockquote>
+<p>Most data structures classes require Object Oriented Programming (OOP).  Since this class is lined up with a College Course,  OOP will be talked about often.  Functionality in remainder of this Blog is the same as the prior implementation.  Highlight some of the key difference you see between imperative and oop styles.</p>
+<ul>
+<li>Read imperative and object-oriented programming on Wikipedia</li>
+<li>Consider how data is organized in two examples, in relations to procedures</li>
+<li>Look at Parameters in Imperative and Self in OOP</li>
+</ul>
+</blockquote>
+<h2 id="Additionally,-review-all-the-imports-in-these-three-demos.--Create-a-definition-of-their-purpose,-specifically-these-...">
+<a class="anchor" href="#Additionally,-review-all-the-imports-in-these-three-demos.--Create-a-definition-of-their-purpose,-specifically-these-..." aria-hidden="true"><span class="octicon octicon-link"></span></a>Additionally, review all the imports in these three demos.  Create a definition of their purpose, specifically these ...<a class="anchor-link" href="#Additionally,-review-all-the-imports-in-these-three-demos.--Create-a-definition-of-their-purpose,-specifically-these-..."> </a>
+</h2>
+<ul>
+<li>PIL</li>
+<li>numpy</li>
+<li>base64</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">pilImage</span> <span class="c1"># as pilImage is used to avoid conflicts</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="k">class</span> <span class="nc">Image_Data</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">baseWidth</span><span class="o">=</span><span class="mi">320</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="n">source</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_file</span> <span class="o">=</span> <span class="n">file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">file</span>  <span class="c1"># file with path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_baseWidth</span> <span class="o">=</span> <span class="n">baseWidth</span>
+
+        <span class="c1"># Open image and scale to needs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_img</span> <span class="o">=</span> <span class="n">pilImage</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">format</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_originalSize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_image</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_html</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_to_html</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_html_grey</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_to_html_grey</span><span class="p">()</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span>  
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> 
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file</span>   
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span>   
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">img</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span>
+             
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">originalSize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_originalSize</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">size</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">html</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_html</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">html_grey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_html_grey</span>
+        
+    <span class="c1"># Large image scaled to baseWidth of 320</span>
+    <span class="k">def</span> <span class="nf">scale_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">scalePercent</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_baseWidth</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="n">scaleHeight</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">scalePercent</span><span class="p">)))</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_baseWidth</span><span class="p">,</span> <span class="n">scaleHeight</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">scale</span><span class="p">)</span>
+    
+    <span class="c1"># PIL image converted to base64</span>
+    <span class="k">def</span> <span class="nf">image_to_html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">BytesIO</span><span class="p">()</span> <span class="k">as</span> <span class="n">buffer</span><span class="p">:</span>
+            <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s1">'&lt;img src="data:image/png;base64,</span><span class="si">%s</span><span class="s1">"&gt;'</span> <span class="o">%</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+            
+    <span class="c1"># Create Grey Scale Base64 representation of Image</span>
+    <span class="k">def</span> <span class="nf">image_to_html_grey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">img_grey</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_img</span>
+        <span class="n">numpy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_img</span><span class="o">.</span><span class="n">getdata</span><span class="p">())</span> <span class="c1"># PIL image to numpy array</span>
+        
+        <span class="n">grey_data</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># key/value for data converted to gray scale</span>
+        <span class="c1"># 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted</span>
+        <span class="k">for</span> <span class="n">pixel</span> <span class="ow">in</span> <span class="n">numpy</span><span class="p">:</span>
+            <span class="c1"># create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/</span>
+            <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># average pixel values and use // for integer division</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pixel</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">grey_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span> <span class="c1"># PNG format</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">grey_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">average</span><span class="p">))</span>
+            <span class="c1"># end for loop for pixels</span>
+            
+        <span class="n">img_grey</span><span class="o">.</span><span class="n">putdata</span><span class="p">(</span><span class="n">grey_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">image_to_html</span><span class="p">(</span><span class="n">img_grey</span><span class="p">)</span>
+
+        
+<span class="c1"># prepares a series of images, provides expectation for required contents</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"images/"</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+    <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Internet"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Green Square"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"green-square-16.png"</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Clouds Impression"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"clouds-impression.png"</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Lassen Volcano"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"lassen-volcano.jpg"</span><span class="p">}</span>
+        <span class="p">]</span>
+    <span class="k">return</span> <span class="n">path</span><span class="p">,</span> <span class="n">images</span>
+
+<span class="c1"># turns data into objects</span>
+<span class="k">def</span> <span class="nf">image_objects</span><span class="p">():</span>        
+    <span class="n">id_Objects</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="n">id_Objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Image_Data</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">image</span><span class="p">[</span><span class="s1">'source'</span><span class="p">],</span> 
+                                  <span class="n">label</span><span class="o">=</span><span class="n">image</span><span class="p">[</span><span class="s1">'label'</span><span class="p">],</span>
+                                  <span class="n">file</span><span class="o">=</span><span class="n">image</span><span class="p">[</span><span class="s1">'file'</span><span class="p">],</span>
+                                  <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+                                  <span class="p">))</span>
+    <span class="k">return</span> <span class="n">id_Objects</span>
+
+<span class="c1"># Jupyter Notebook Visualization of Images</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">ido</span> <span class="ow">in</span> <span class="n">image_objects</span><span class="p">():</span> <span class="c1"># ido is an Imaged Data Object</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"---- meta data -----"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">source</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">file</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Original size: "</span><span class="p">,</span> <span class="n">ido</span><span class="o">.</span><span class="n">originalSize</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Scaled size: "</span><span class="p">,</span> <span class="n">ido</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"-- scaled image --"</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">html</span><span class="p">))</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"--- grey image ---"</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">ido</span><span class="o">.</span><span class="n">html_grey</span><span class="p">))</span>
+        
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<blockquote>
+<p>Early Seed award</p>
+<ul>
+<li>Add this Blog to you own Blogging site.</li>
+<li>In the Blog add a Happy Face image.</li>
+<li>Have Happy Face Image open when Tech Talk starts, running on localhost.  Don't tell anyone. Show to Teacher.</li>
+</ul>
+<p>AP Prep</p>
+<ul>
+<li>In the Blog add notes and observations on each code cell that request an answer.</li>
+<li>In blog add College Board practice problems for 2.3</li>
+<li>Choose 2 images, one that will more likely result in lossy data compression and one that is more likely to result in lossless data compression. Explain.</li>
+</ul>
+<p>Project Addition</p>
+<ul>
+<li>If your project has images in it, try to implement an image change that has a purpose. (Ex. An item that has been sold out could become gray scale)</li>
+</ul>
+<p>Pick a programming paradigm and solve some of the following ...</p>
+<ul>
+<li>Numpy, manipulating pixels.  As opposed to Grey Scale treatment, pick a couple of other types like red scale, green scale, or blue scale.  We want you to be manipulating pixels in the image.</li>
+<li>Binary and Hexadecimal reports.  Convert and produce pixels in binary and Hexadecimal and display.</li>
+<li>Compression and Sizing of images.  Look for insights into compression Lossy and Lossless.  Look at PIL library and see if there are other things that can be done.</li>
+<li>There are many effects you can do as well with PIL. Blur the image or write Meta Data on screen, aka Title, Author and Image size.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f</span>
+
+<span class="c1"># prepares a series of images</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">"images/"</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+    <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">'source'</span><span class="p">:</span> <span class="s2">"Peter Carolin"</span><span class="p">,</span> <span class="s1">'label'</span><span class="p">:</span> <span class="s2">"Clouds Impression"</span><span class="p">,</span> <span class="s1">'file'</span><span class="p">:</span> <span class="s2">"happyface.png"</span><span class="p">},</span>
+        <span class="p">]</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+        <span class="c1"># File to open</span>
+        <span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">image</span><span class="p">[</span><span class="s1">'file'</span><span class="p">]</span>  <span class="c1"># file with path</span>
+    <span class="k">return</span> <span class="n">images</span>
+
+<span class="k">def</span> <span class="nf">image_display</span><span class="p">(</span><span class="n">images</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>  
+        <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">image</span><span class="p">[</span><span class="s1">'filename'</span><span class="p">]))</span>
+
+
+<span class="c1"># Run this as standalone tester to see sample data printed in Jupyter terminal</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="c1"># print parameter supplied image</span>
+    <span class="c1"># green_square = image_data(images=[{'source': "Internet", 'label': "Green Square", 'file': "happyface.png"}])</span>
+    <span class="c1"># image_display(green_square)</span>
+    
+    <span class="c1"># display default images from image_data()</span>
+    <span class="n">default_images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    <span class="n">image_display</span><span class="p">(</span><span class="n">default_images</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/fastpages-sachit-blog/2023/03/07/AP-unit2-2.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-sachit-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-sachit-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>This is my VSCode Fastpages project.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
