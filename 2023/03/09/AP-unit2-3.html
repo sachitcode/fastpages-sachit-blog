@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      18 min read
     
 </span></p>
 
@@ -146,7 +146,23 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Titanic-Data">Titanic Data </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Machine-Learning-Visit-Tutorials-Point">Machine Learning Visit Tutorials Point </a></li>
+<li class="toc-entry toc-h2"><a href="#Machine-Learning-Visit-Tutorials-Point">Machine Learning Visit Tutorials Point </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#AP-Prep">AP Prep </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#AP-Prep">AP Prep </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Score">Score </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-1---Correct">Question 1 - Correct </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-2---Correct">Question 2 - Correct </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-3---Correct">Question 3 - Correct </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-4---Incorrect">Question 4 - Incorrect </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-5---Correct">Question 5 - Correct </a></li>
+<li class="toc-entry toc-h3"><a href="#Question-6---Correct">Question 6 - Correct </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Dataset-Hacks">Dataset Hacks </a></li>
 </ul>
 </li>
 </ul><!--
@@ -742,10 +758,10 @@ None
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/data.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Duration'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"--Duration Top 10---------"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># prints top 10 highest duration values</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"--Duration Bottom 10------"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1"># prints top 10 lowest duration values</span>
 </pre></div>
 
     </div>
@@ -822,7 +838,7 @@ None
 
 <span class="k">def</span> <span class="nf">fetch</span><span class="p">():</span>
     <span class="sd">'''Obtain data from an endpoint'''</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://flask.nighthawkcodingsociety.com/api/covid/"</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://flask.nighthawkcodingsociety.com/api/covid/"</span> <span class="c1"># data obtained from this url</span>
     <span class="n">fetch</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="n">json</span> <span class="o">=</span> <span class="n">fetch</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
@@ -877,6 +893,9 @@ None
 <li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
 <li>In blog add College Board practice problems for 2.3.</li>
 </ul>
+</blockquote>
+<p>DONE - Added comments in every code cell to show my understanding of the code</p>
+<blockquote>
 <p>The next 4 weeks, Teachers want you to improve your understanding of data.  Look at the blog and others on Unit 2.  Your intention is to find some things to differentiate your individual College Board project.</p>
 </blockquote>
 <ul>
@@ -1404,6 +1423,140 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
 Please also refer to the documentation for alternative solver options:
     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
   n_iter_i = _check_optimize_result(
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="AP-Prep">
+<a class="anchor" href="#AP-Prep" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP Prep<a class="anchor-link" href="#AP-Prep"> </a>
+</h3>
+<h2 id="AP-Prep">
+<a class="anchor" href="#AP-Prep" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP Prep<a class="anchor-link" href="#AP-Prep"> </a>
+</h2>
+<h3 id="Score">
+<a class="anchor" href="#Score" aria-hidden="true"><span class="octicon octicon-link"></span></a>Score<a class="anchor-link" href="#Score"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQuiz.png" alt="Extracting Information from Data"></p>
+<h3 id="Question-1---Correct">
+<a class="anchor" href="#Question-1---Correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 1 - Correct<a class="anchor-link" href="#Question-1---Correct"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ1.png" alt="Extracting Information from Data Q1"></p>
+<h3 id="Question-2---Correct">
+<a class="anchor" href="#Question-2---Correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 2 - Correct<a class="anchor-link" href="#Question-2---Correct"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ2.png" alt="Extracting Information from Data Q2"></p>
+<h3 id="Question-3---Correct">
+<a class="anchor" href="#Question-3---Correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 3 - Correct<a class="anchor-link" href="#Question-3---Correct"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ3.png" alt="Extracting Information from Data Q3"></p>
+<h3 id="Question-4---Incorrect">
+<a class="anchor" href="#Question-4---Incorrect" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 4 - Incorrect<a class="anchor-link" href="#Question-4---Incorrect"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ4.png" alt="Extracting Information from Data Q4"></p>
+<p><strong>Explanation:</strong> For this question, the reason I selected answer D ("Total dollar amount of food and drinks sold during the show") was because I knew that the number of food and drinks sold would correlate to attendance or number of people who showed up to the concert. However, College Board's answer was A ("Average ticket price") because the attendance can be calculated by dividing the total dollar amount of all tickets sold by the average ticket price. I didn't realize that the attendance could be calculated this way so I got this question wrong.</p>
+<h3 id="Question-5---Correct">
+<a class="anchor" href="#Question-5---Correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 5 - Correct<a class="anchor-link" href="#Question-5---Correct"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ5.png" alt="Extracting Information from Data Q5"></p>
+<h3 id="Question-6---Correct">
+<a class="anchor" href="#Question-6---Correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question 6 - Correct<a class="anchor-link" href="#Question-6---Correct"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/extractingInformationQ6.png" alt="Extracting Information from Data Q6"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dataset-Hacks">
+<a class="anchor" href="#Dataset-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Hacks<a class="anchor-link" href="#Dataset-Hacks"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Creating dataset</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Sachit"</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"sachitbprasad@gmail.com"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Billy"</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"billyg@gmail.com"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Gabriel"</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"gabr!elov@gmail.com"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Alex"</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"@alexz123@gmail.com"</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Colin"</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"@colinw@gmail.com"</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># converting dataset into pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Maximum age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()))</span>
+
+<span class="c1"># Finds and prints minimum value for age (youngest person in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Minimum age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span>
+
+<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Mean) age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+
+<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Median) age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
+
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mode (Most common value) of ages: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Maximum age: 53
+Minimum age: 5
+Average (Mean) age: 21.0
+Average (Median) age: 15.0
+Mode (Most common value) of ages: 5
 </pre>
 </div>
 </div>
