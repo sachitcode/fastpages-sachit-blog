@@ -1499,26 +1499,31 @@ Please also refer to the documentation for alternative solver options:
   <span class="p">{</span>
     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Sachit"</span><span class="p">,</span>
     <span class="s2">"age"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s2">"favorite number"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
     <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"sachitbprasad@gmail.com"</span>
   <span class="p">},</span>
   <span class="p">{</span>
     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Billy"</span><span class="p">,</span>
     <span class="s2">"age"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="s2">"favorite number"</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
     <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"billyg@gmail.com"</span>
   <span class="p">},</span>
   <span class="p">{</span>
     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Gabriel"</span><span class="p">,</span>
     <span class="s2">"age"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">"favorite number"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"gabr!elov@gmail.com"</span>
   <span class="p">},</span>
   <span class="p">{</span>
     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Alex"</span><span class="p">,</span>
     <span class="s2">"age"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s2">"favorite number"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
     <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"@alexz123@gmail.com"</span>
   <span class="p">},</span>
   <span class="p">{</span>
     <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Colin"</span><span class="p">,</span>
     <span class="s2">"age"</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="s2">"favorite number"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
     <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"@colinw@gmail.com"</span>
   <span class="p">}</span>
 <span class="p">]</span>
@@ -1526,20 +1531,21 @@ Please also refer to the documentation for alternative solver options:
 <span class="c1"># converting dataset into pandas DataFrame</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
-<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Maximum age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()))</span>
+<span class="c1"># Finds and prints maximum value for favorite number (highest number in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Maximum favorite number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"favorite number"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()))</span>
 
-<span class="c1"># Finds and prints minimum value for age (youngest person in the dataset)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Minimum age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span>
+<span class="c1"># Finds and prints minimum value for favorite number (lowest number in the dataset)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Minimum favorite number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"favorite number"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span>
 
-<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Mean) age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+<span class="c1"># Finds and prints average favorite number value (using mean)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Mean) favorite number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"favorite number"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
 
-<span class="c1"># Finds and prints maximum value for age (oldest person in the dataset)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Median) age: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
+<span class="c1"># Finds and prints average favorite number value (using median)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average (Median) favorite number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"favorite number"</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
 
-<span class="c1">#</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Mode (Most common value) of ages: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="c1"># Finds and prints most common favorite number in the dataset</span>
+<span class="c1"># Since 2 people have a favorite number of 8, this is the most common favorite number in the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mode (Most common value) of favorite numbers: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"favorite number"</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -1552,11 +1558,11 @@ Please also refer to the documentation for alternative solver options:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Maximum age: 53
-Minimum age: 5
-Average (Mean) age: 21.0
-Average (Median) age: 15.0
-Mode (Most common value) of ages: 5
+<pre>Maximum favorite number: 100
+Minimum favorite number: 3
+Average (Mean) favorite number: 26.2
+Average (Median) favorite number: 8.0
+Mode (Most common value) of favorite numbers: 8
 </pre>
 </div>
 </div>
