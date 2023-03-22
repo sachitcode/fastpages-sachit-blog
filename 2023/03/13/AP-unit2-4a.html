@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      17 min read
     
 </span></p>
 
@@ -790,72 +790,47 @@ Created
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># # Inputs, Try/Except, and SQLAlchemy work together to update a valid database object</span>
-<span class="c1"># def updateByUid():</span>
-<span class="c1">#     # optimize user time to see if uid exists</span>
-<span class="c1">#     uid = input("Enter your user id:")</span>
-    
-<span class="c1">#     # request value that ensure creating valid object</span>
-<span class="c1">#     name = input("Enter your name:")</span>
-<span class="c1">#     password = input("Enter your password")</span>
-    
-<span class="c1">#     # Initialize User object before date</span>
-<span class="c1">#     user = User(name=name, </span>
-<span class="c1">#                 uid=uid, </span>
-<span class="c1">#                 password=password</span>
-<span class="c1">#                 )</span>
-    
-<span class="c1">#     # update user.dob, fail with today as dob</span>
-<span class="c1">#     dob = input("Enter your date of birth 'YYYY-MM-DD'")</span>
-<span class="c1">#     try:</span>
-<span class="c1">#         user.dob = datetime.strptime(dob, '%Y-%m-%d').date()</span>
-<span class="c1">#     except ValueError:</span>
-<span class="c1">#         user.dob = datetime.today()</span>
-<span class="c1">#         print(f"Invalid date {dob} require YYYY-mm-dd, date defaulted to {user.dob}")</span>
-
-<span class="c1">#     dictionary = {</span>
-<span class="c1">#         "uid": uid,</span>
-<span class="c1">#         "inputs": {"uid": uid, "name": name, "password": password, "dob": dob}</span>
-<span class="c1">#     }</span>
-
-<span class="c1">#     uid1 = input("Enter the uid for the entry you want to update.")</span>
-
-<span class="c1">#     data = dictionary.get('inputs') # get what needs to be updated</span>
-<span class="c1">#     entry = find_by_uid(uid1) # get the uid</span>
-
-<span class="c1">#     print(entry)</span>
-
-<span class="c1">#     with app.app_context():</span>
-<span class="c1">#         entry.update(data)</span>
-<span class="c1">#         db.session.commit() # save the changes to the database</span>
-<span class="c1">#     return f" The user with the uid {entry.uid1} has been updated."</span>
-        
-<span class="c1"># updateByUid() # Calling update function</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Inputs, Try/Except, and SQLAlchemy work together to update a valid database object</span>
 <span class="k">def</span> <span class="nf">updateByUid</span><span class="p">():</span>
-    <span class="c1"># input - uid of the user which we want to update</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the user id for the user you want to update."</span><span class="p">)</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
+    
+    <span class="c1"># request value that ensure creating valid object</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
+    
+    <span class="c1"># Initialize User object before date</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> 
+                <span class="n">uid</span><span class="o">=</span><span class="n">uid</span><span class="p">,</span> 
+                <span class="n">password</span><span class="o">=</span><span class="n">password</span>
+                <span class="p">)</span>
+    
+    <span class="c1"># update user.dob, fail with today as dob</span>
+    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid date </span><span class="si">{</span><span class="n">dob</span><span class="si">}</span><span class="s2"> require YYYY-mm-dd, date defaulted to </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"User does not exist."</span><span class="p">)</span>
-        <span class="k">return</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'User Found With user id '</span><span class="o">+</span><span class="n">uid</span><span class="p">)</span>
-        
-    <span class="n">newUid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a new Uid"</span><span class="p">)</span>
-    <span class="n">newName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a new name"</span><span class="p">)</span>
-         
-    <span class="c1"># Update the user details</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"uid"</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span>
+        <span class="s2">"inputs"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"uid"</span><span class="p">:</span> <span class="n">uid</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span> <span class="s2">"dob"</span><span class="p">:</span> <span class="n">dob</span><span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">uid1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the uid for the entry you want to update."</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'inputs'</span><span class="p">)</span> <span class="c1"># get what needs to be updated</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid1</span><span class="p">)</span> <span class="c1"># get the uid</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="nb">object</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">newName</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="n">newUid</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"User is successfully updated: "</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error Occurred: User not updated"</span><span class="p">)</span>
-
-
-<span class="n">updateByUid</span><span class="p">()</span>
+        <span class="n">entry</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span> <span class="c1"># save the changes to the database</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">" The user with the uid </span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">uid1</span><span class="si">}</span><span class="s2"> has been updated."</span>
+        
+<span class="n">updateByUid</span><span class="p">()</span> <span class="c1"># Calling update function</span>
 </pre></div>
 
     </div>
@@ -868,9 +843,280 @@ Created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>User Found With user id sachitcool
-User is sucessfully updated:  {'id': 5, 'name': 'prasad', 'uid': 'sachitcool1', 'dob': '10-21-1920', 'age': 102}
+<pre>{"id": 5, "name": "Indiana Jones", "uid": "indi", "dob": "10-21-1920", "age": 102}
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">InterfaceError</span>                            Traceback (most recent call last)
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1964</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1963</span>     if not evt_handled:
+<span class="ansi-green-fg">-&gt; 1964</span>         self.dialect.do_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1965</span>             cursor, str_statement, effective_parameters, context
+<span class="ansi-green-intense-fg ansi-bold">   1966</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1968</span> if self._has_events or self.engine._has_events:
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py:748</span>, in <span class="ansi-cyan-fg">DefaultDialect.do_execute</span><span class="ansi-blue-fg">(self, cursor, statement, parameters, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    747</span> def do_execute(self, cursor, statement, parameters, context=None):
+<span class="ansi-green-fg">--&gt; 748</span>     cursor.execute(statement, parameters)
+
+<span class="ansi-red-fg">InterfaceError</span>: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+<span class="ansi-red-fg">InterfaceError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 17</span> in <span class="ansi-cyan-fg">&lt;cell line: 42&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=38'&gt;39&lt;/a&gt;</span>         db.session.commit() # save the changes to the database
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=39'&gt;40&lt;/a&gt;</span>     return f" The user with the uid {entry.uid1} has been updated."
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=41'&gt;42&lt;/a&gt;</span> updateByUid()
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 17</span> in <span class="ansi-cyan-fg">updateByUid</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=34'&gt;35&lt;/a&gt;</span> print(entry)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=36'&gt;37&lt;/a&gt;</span> with app.app_context():
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=37'&gt;38&lt;/a&gt;</span>     entry.update(data)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=38'&gt;39&lt;/a&gt;</span>     db.session.commit() # save the changes to the database
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=39'&gt;40&lt;/a&gt;</span> return f" The user with the uid {entry.uid1} has been updated."
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 17</span> in <span class="ansi-cyan-fg">User.update</span><span class="ansi-blue-fg">(self, name, uid, password)</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=130'&gt;131&lt;/a&gt;</span>     self.set_password(password)
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=131'&gt;132&lt;/a&gt;</span> db.session.add(self) # performs update when id exists
+<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=132'&gt;133&lt;/a&gt;</span> db.session.commit()
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell:/Users/sachit/vscode/fastpages-sachit-blog/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X21sZmlsZQ%3D%3D?line=133'&gt;134&lt;/a&gt;</span> return self
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/scoping.py:553</span>, in <span class="ansi-cyan-fg">scoped_session.commit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    514</span> def commit(self) -&gt; None:
+<span class="ansi-green-intense-fg ansi-bold">    515</span>     r"""Flush pending changes and commit the current transaction.
+<span class="ansi-green-intense-fg ansi-bold">    516</span> 
+<span class="ansi-green-intense-fg ansi-bold">    517</span>     .. container:: class_bases
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    550</span> 
+<span class="ansi-green-intense-fg ansi-bold">    551</span>     """  # noqa: E501
+<span class="ansi-green-fg">--&gt; 553</span>     return self._proxied.commit()
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1903</span>, in <span class="ansi-cyan-fg">Session.commit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1900</span> if trans is None:
+<span class="ansi-green-intense-fg ansi-bold">   1901</span>     trans = self._autobegin_t()
+<span class="ansi-green-fg">-&gt; 1903</span> trans.commit(_to_root=True)
+
+File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">commit</span><span class="ansi-blue-fg">(self, _to_root)</span>
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/state_changes.py:137</span>, in <span class="ansi-cyan-fg">_StateChange.declare_states.&lt;locals&gt;._go</span><span class="ansi-blue-fg">(fn, self, *arg, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    135</span> self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS
+<span class="ansi-green-intense-fg ansi-bold">    136</span> try:
+<span class="ansi-green-fg">--&gt; 137</span>     ret_value = fn(self, *arg, **kw)
+<span class="ansi-green-intense-fg ansi-bold">    138</span> except:
+<span class="ansi-green-intense-fg ansi-bold">    139</span>     raise
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1218</span>, in <span class="ansi-cyan-fg">SessionTransaction.commit</span><span class="ansi-blue-fg">(self, _to_root)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1216</span> if self._state is not SessionTransactionState.PREPARED:
+<span class="ansi-green-intense-fg ansi-bold">   1217</span>     with self._expect_state(SessionTransactionState.PREPARED):
+<span class="ansi-green-fg">-&gt; 1218</span>         self._prepare_impl()
+<span class="ansi-green-intense-fg ansi-bold">   1220</span> if self._parent is None or self.nested:
+<span class="ansi-green-intense-fg ansi-bold">   1221</span>     for conn, trans, should_commit, autoclose in set(
+<span class="ansi-green-intense-fg ansi-bold">   1222</span>         self._connections.values()
+<span class="ansi-green-intense-fg ansi-bold">   1223</span>     ):
+
+File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">_prepare_impl</span><span class="ansi-blue-fg">(self)</span>
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/state_changes.py:137</span>, in <span class="ansi-cyan-fg">_StateChange.declare_states.&lt;locals&gt;._go</span><span class="ansi-blue-fg">(fn, self, *arg, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    135</span> self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS
+<span class="ansi-green-intense-fg ansi-bold">    136</span> try:
+<span class="ansi-green-fg">--&gt; 137</span>     ret_value = fn(self, *arg, **kw)
+<span class="ansi-green-intense-fg ansi-bold">    138</span> except:
+<span class="ansi-green-intense-fg ansi-bold">    139</span>     raise
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1193</span>, in <span class="ansi-cyan-fg">SessionTransaction._prepare_impl</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1191</span>     if self.session._is_clean():
+<span class="ansi-green-intense-fg ansi-bold">   1192</span>         break
+<span class="ansi-green-fg">-&gt; 1193</span>     self.session.flush()
+<span class="ansi-green-intense-fg ansi-bold">   1194</span> else:
+<span class="ansi-green-intense-fg ansi-bold">   1195</span>     raise exc.FlushError(
+<span class="ansi-green-intense-fg ansi-bold">   1196</span>         "Over 100 subsequent flushes have occurred within "
+<span class="ansi-green-intense-fg ansi-bold">   1197</span>         "session.commit() - is an after_flush() hook "
+<span class="ansi-green-intense-fg ansi-bold">   1198</span>         "creating new objects?"
+<span class="ansi-green-intense-fg ansi-bold">   1199</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4155</span>, in <span class="ansi-cyan-fg">Session.flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4153</span> try:
+<span class="ansi-green-intense-fg ansi-bold">   4154</span>     self._flushing = True
+<span class="ansi-green-fg">-&gt; 4155</span>     self._flush(objects)
+<span class="ansi-green-intense-fg ansi-bold">   4156</span> finally:
+<span class="ansi-green-intense-fg ansi-bold">   4157</span>     self._flushing = False
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4292</span>, in <span class="ansi-cyan-fg">Session._flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4290</span> except:
+<span class="ansi-green-intense-fg ansi-bold">   4291</span>     with util.safe_reraise():
+<span class="ansi-green-fg">-&gt; 4292</span>         transaction.rollback(_capture_exception=True)
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py:147</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
+<span class="ansi-green-intense-fg ansi-bold">    145</span>     assert exc_value is not None
+<span class="ansi-green-intense-fg ansi-bold">    146</span>     self._exc_info = None  # remove potential circular references
+<span class="ansi-green-fg">--&gt; 147</span>     raise exc_value.with_traceback(exc_tb)
+<span class="ansi-green-intense-fg ansi-bold">    148</span> else:
+<span class="ansi-green-intense-fg ansi-bold">    149</span>     self._exc_info = None  # remove potential circular references
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4252</span>, in <span class="ansi-cyan-fg">Session._flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4250</span> self._warn_on_events = True
+<span class="ansi-green-intense-fg ansi-bold">   4251</span> try:
+<span class="ansi-green-fg">-&gt; 4252</span>     flush_context.execute()
+<span class="ansi-green-intense-fg ansi-bold">   4253</span> finally:
+<span class="ansi-green-intense-fg ansi-bold">   4254</span>     self._warn_on_events = False
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py:467</span>, in <span class="ansi-cyan-fg">UOWTransaction.execute</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    465</span> else:
+<span class="ansi-green-intense-fg ansi-bold">    466</span>     for rec in topological.sort(self.dependencies, postsort_actions):
+<span class="ansi-green-fg">--&gt; 467</span>         rec.execute(self)
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py:644</span>, in <span class="ansi-cyan-fg">SaveUpdateAll.execute</span><span class="ansi-blue-fg">(self, uow)</span>
+<span class="ansi-green-intense-fg ansi-bold">    642</span> @util.preload_module("sqlalchemy.orm.persistence")
+<span class="ansi-green-intense-fg ansi-bold">    643</span> def execute(self, uow):
+<span class="ansi-green-fg">--&gt; 644</span>     util.preloaded.orm_persistence.save_obj(
+<span class="ansi-green-intense-fg ansi-bold">    645</span>         self.mapper,
+<span class="ansi-green-intense-fg ansi-bold">    646</span>         uow.states_for_mapper_hierarchy(self.mapper, False, False),
+<span class="ansi-green-intense-fg ansi-bold">    647</span>         uow,
+<span class="ansi-green-intense-fg ansi-bold">    648</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py:85</span>, in <span class="ansi-cyan-fg">save_obj</span><span class="ansi-blue-fg">(base_mapper, states, uowtransaction, single)</span>
+<span class="ansi-green-intense-fg ansi-bold">     79</span>     insert = _collect_insert_commands(table, states_to_insert)
+<span class="ansi-green-intense-fg ansi-bold">     81</span>     update = _collect_update_commands(
+<span class="ansi-green-intense-fg ansi-bold">     82</span>         uowtransaction, table, states_to_update
+<span class="ansi-green-intense-fg ansi-bold">     83</span>     )
+<span class="ansi-green-fg">---&gt; 85</span>     _emit_update_statements(
+<span class="ansi-green-intense-fg ansi-bold">     86</span>         base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">     87</span>         uowtransaction,
+<span class="ansi-green-intense-fg ansi-bold">     88</span>         mapper,
+<span class="ansi-green-intense-fg ansi-bold">     89</span>         table,
+<span class="ansi-green-intense-fg ansi-bold">     90</span>         update,
+<span class="ansi-green-intense-fg ansi-bold">     91</span>     )
+<span class="ansi-green-intense-fg ansi-bold">     93</span>     _emit_insert_statements(
+<span class="ansi-green-intense-fg ansi-bold">     94</span>         base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">     95</span>         uowtransaction,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     98</span>         insert,
+<span class="ansi-green-intense-fg ansi-bold">     99</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    101</span> _finalize_insert_update_commands(
+<span class="ansi-green-intense-fg ansi-bold">    102</span>     base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">    103</span>     uowtransaction,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    119</span>     ),
+<span class="ansi-green-intense-fg ansi-bold">    120</span> )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py:890</span>, in <span class="ansi-cyan-fg">_emit_update_statements</span><span class="ansi-blue-fg">(base_mapper, uowtransaction, mapper, table, update, bookkeeping, use_orm_update_stmt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    884</span> multiparams = [rec[2] for rec in records]
+<span class="ansi-green-intense-fg ansi-bold">    886</span> check_rowcount = assert_multirow or (
+<span class="ansi-green-intense-fg ansi-bold">    887</span>     assert_singlerow and len(multiparams) == 1
+<span class="ansi-green-intense-fg ansi-bold">    888</span> )
+<span class="ansi-green-fg">--&gt; 890</span> c = connection.execute(
+<span class="ansi-green-intense-fg ansi-bold">    891</span>     statement, multiparams, execution_options=execution_options
+<span class="ansi-green-intense-fg ansi-bold">    892</span> )
+<span class="ansi-green-intense-fg ansi-bold">    894</span> rows += c.rowcount
+<span class="ansi-green-intense-fg ansi-bold">    896</span> for (
+<span class="ansi-green-intense-fg ansi-bold">    897</span>     state,
+<span class="ansi-green-intense-fg ansi-bold">    898</span>     state_dict,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    904</span>     has_all_pks,
+<span class="ansi-green-intense-fg ansi-bold">    905</span> ) in records:
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1414</span>, in <span class="ansi-cyan-fg">Connection.execute</span><span class="ansi-blue-fg">(self, statement, parameters, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1412</span>     raise exc.ObjectNotExecutableError(statement) from err
+<span class="ansi-green-intense-fg ansi-bold">   1413</span> else:
+<span class="ansi-green-fg">-&gt; 1414</span>     return meth(
+<span class="ansi-green-intense-fg ansi-bold">   1415</span>         self,
+<span class="ansi-green-intense-fg ansi-bold">   1416</span>         distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1417</span>         execution_options or NO_OPTIONS,
+<span class="ansi-green-intense-fg ansi-bold">   1418</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py:486</span>, in <span class="ansi-cyan-fg">ClauseElement._execute_on_connection</span><span class="ansi-blue-fg">(self, connection, distilled_params, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    484</span>     if TYPE_CHECKING:
+<span class="ansi-green-intense-fg ansi-bold">    485</span>         assert isinstance(self, Executable)
+<span class="ansi-green-fg">--&gt; 486</span>     return connection._execute_clauseelement(
+<span class="ansi-green-intense-fg ansi-bold">    487</span>         self, distilled_params, execution_options
+<span class="ansi-green-intense-fg ansi-bold">    488</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    489</span> else:
+<span class="ansi-green-intense-fg ansi-bold">    490</span>     raise exc.ObjectNotExecutableError(self)
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1638</span>, in <span class="ansi-cyan-fg">Connection._execute_clauseelement</span><span class="ansi-blue-fg">(self, elem, distilled_parameters, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1626</span> compiled_cache: Optional[CompiledCacheType] = execution_options.get(
+<span class="ansi-green-intense-fg ansi-bold">   1627</span>     "compiled_cache", self.engine._compiled_cache
+<span class="ansi-green-intense-fg ansi-bold">   1628</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1630</span> compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+<span class="ansi-green-intense-fg ansi-bold">   1631</span>     dialect=dialect,
+<span class="ansi-green-intense-fg ansi-bold">   1632</span>     compiled_cache=compiled_cache,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1636</span>     linting=self.dialect.compiler_linting | compiler.WARN_LINTING,
+<span class="ansi-green-intense-fg ansi-bold">   1637</span> )
+<span class="ansi-green-fg">-&gt; 1638</span> ret = self._execute_context(
+<span class="ansi-green-intense-fg ansi-bold">   1639</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">   1640</span>     dialect.execution_ctx_cls._init_compiled,
+<span class="ansi-green-intense-fg ansi-bold">   1641</span>     compiled_sql,
+<span class="ansi-green-intense-fg ansi-bold">   1642</span>     distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1643</span>     execution_options,
+<span class="ansi-green-intense-fg ansi-bold">   1644</span>     compiled_sql,
+<span class="ansi-green-intense-fg ansi-bold">   1645</span>     distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1646</span>     elem,
+<span class="ansi-green-intense-fg ansi-bold">   1647</span>     extracted_params,
+<span class="ansi-green-intense-fg ansi-bold">   1648</span>     cache_hit=cache_hit,
+<span class="ansi-green-intense-fg ansi-bold">   1649</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1650</span> if has_events:
+<span class="ansi-green-intense-fg ansi-bold">   1651</span>     self.dispatch.after_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1652</span>         self,
+<span class="ansi-green-intense-fg ansi-bold">   1653</span>         elem,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1657</span>         ret,
+<span class="ansi-green-intense-fg ansi-bold">   1658</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1842</span>, in <span class="ansi-cyan-fg">Connection._execute_context</span><span class="ansi-blue-fg">(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1837</span>     return self._exec_insertmany_context(
+<span class="ansi-green-intense-fg ansi-bold">   1838</span>         dialect,
+<span class="ansi-green-intense-fg ansi-bold">   1839</span>         context,
+<span class="ansi-green-intense-fg ansi-bold">   1840</span>     )
+<span class="ansi-green-intense-fg ansi-bold">   1841</span> else:
+<span class="ansi-green-fg">-&gt; 1842</span>     return self._exec_single_context(
+<span class="ansi-green-intense-fg ansi-bold">   1843</span>         dialect, context, statement, parameters
+<span class="ansi-green-intense-fg ansi-bold">   1844</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1983</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1980</span>     result = context._setup_result_proxy()
+<span class="ansi-green-intense-fg ansi-bold">   1982</span> except BaseException as e:
+<span class="ansi-green-fg">-&gt; 1983</span>     self._handle_dbapi_exception(
+<span class="ansi-green-intense-fg ansi-bold">   1984</span>         e, str_statement, effective_parameters, cursor, context
+<span class="ansi-green-intense-fg ansi-bold">   1985</span>     )
+<span class="ansi-green-intense-fg ansi-bold">   1987</span> return result
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:2326</span>, in <span class="ansi-cyan-fg">Connection._handle_dbapi_exception</span><span class="ansi-blue-fg">(self, e, statement, parameters, cursor, context, is_sub_exec)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2324</span> elif should_wrap:
+<span class="ansi-green-intense-fg ansi-bold">   2325</span>     assert sqlalchemy_exception is not None
+<span class="ansi-green-fg">-&gt; 2326</span>     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+<span class="ansi-green-intense-fg ansi-bold">   2327</span> else:
+<span class="ansi-green-intense-fg ansi-bold">   2328</span>     assert exc_info[1] is not None
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1964</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1962</span>                 break
+<span class="ansi-green-intense-fg ansi-bold">   1963</span>     if not evt_handled:
+<span class="ansi-green-fg">-&gt; 1964</span>         self.dialect.do_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1965</span>             cursor, str_statement, effective_parameters, context
+<span class="ansi-green-intense-fg ansi-bold">   1966</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1968</span> if self._has_events or self.engine._has_events:
+<span class="ansi-green-intense-fg ansi-bold">   1969</span>     self.dispatch.after_cursor_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1970</span>         self,
+<span class="ansi-green-intense-fg ansi-bold">   1971</span>         cursor,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1975</span>         context.executemany,
+<span class="ansi-green-intense-fg ansi-bold">   1976</span>     )
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py:748</span>, in <span class="ansi-cyan-fg">DefaultDialect.do_execute</span><span class="ansi-blue-fg">(self, cursor, statement, parameters, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    747</span> def do_execute(self, cursor, statement, parameters, context=None):
+<span class="ansi-green-fg">--&gt; 748</span>     cursor.execute(statement, parameters)
+
+<span class="ansi-red-fg">InterfaceError</span>: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: UPDATE users SET _name=? WHERE users.id = ?]
+[parameters: ({'uid': '1234', 'name': 'skj', 'password': 'abcd', 'dob': '2022-01-23'}, 5)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)</pre>
 </div>
 </div>
 
@@ -900,9 +1146,6 @@ User is sucessfully updated:  {'id': 5, 'name': 'prasad', 'uid': 'sachitcool1', 
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="n">uid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the uid of the entry you want to delete."</span><span class="p">))</span>
         <span class="n">entry</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">entry</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"UID not found."</span><span class="p">)</span>
-            <span class="k">return</span>
         <span class="n">entry</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s2">"The user with the uid </span><span class="si">{</span><span class="n">entry</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s2"> has been deleted."</span>
 
@@ -918,10 +1161,12 @@ User is sucessfully updated:  {'id': 5, 'name': 'prasad', 'uid': 'sachitcool1', 
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>UID not found.
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'The user with the uid 12345 has been deleted.'</pre>
 </div>
+
 </div>
 
 </div>
