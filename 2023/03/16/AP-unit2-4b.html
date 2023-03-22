@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.4b Using Programs with Data, SQL | Sachits Fastpages Project</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.4b Using Programs with Data, SQL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using Programs with Data is focused on SQL and database actions. Part B focuses on learning SQL commands, connections, and curses using an Imperative programming style," />
+<meta property="og:description" content="Using Programs with Data is focused on SQL and database actions. Part B focuses on learning SQL commands, connections, and curses using an Imperative programming style," />
+<link rel="canonical" href="https://sachitcode.github.io/fastpages-sachit-blog/2023/03/16/AP-unit2-4b.html" />
+<meta property="og:url" content="https://sachitcode.github.io/fastpages-sachit-blog/2023/03/16/AP-unit2-4b.html" />
+<meta property="og:site_name" content="Sachits Fastpages Project" />
+<meta property="og:image" content="https://sachitcode.github.io/fastpages-sachit-blog/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-16T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sachitcode.github.io/fastpages-sachit-blog/images/python.png" />
+<meta property="twitter:title" content="Unit 2.4b Using Programs with Data, SQL" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-16T00:00:00-05:00","datePublished":"2023-03-16T00:00:00-05:00","description":"Using Programs with Data is focused on SQL and database actions. Part B focuses on learning SQL commands, connections, and curses using an Imperative programming style,","headline":"Unit 2.4b Using Programs with Data, SQL","image":"https://sachitcode.github.io/fastpages-sachit-blog/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://sachitcode.github.io/fastpages-sachit-blog/2023/03/16/AP-unit2-4b.html"},"url":"https://sachitcode.github.io/fastpages-sachit-blog/2023/03/16/AP-unit2-4b.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-sachit-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml" title="Sachits Fastpages Project" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-sachit-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-sachit-blog/">Sachits Fastpages Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages-sachit-blog/vocab/">Vocab</a><a class="page-link" href="/fastpages-sachit-blog/categories/">Tags</a><a class="page-link" href="/fastpages-sachit-blog/search/">Search</a><a class="page-link" href="/fastpages-sachit-blog/about/">About Me</a><a class="page-link" href="/fastpages-sachit-blog/submenu/">Submenu</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.4b Using Programs with Data, SQL</h1><p class="page-description">Using Programs with Data is focused on SQL and database actions.  Part B focuses on learning SQL commands, connections, and curses using an Imperative programming style,</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-16T00:00:00-05:00" itemprop="datePublished">
+        Mar 16, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/sachitcode/fastpages-sachit-blog/tree/master/_notebooks/2023-03-16-AP-unit2-4b.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/sachitcode/fastpages-sachit-blog/master?filepath=_notebooks%2F2023-03-16-AP-unit2-4b.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/sachitcode/fastpages-sachit-blog/blob/master/_notebooks/2023-03-16-AP-unit2-4b.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fsachitcode%2Ffastpages-sachit-blog%2Fblob%2Fmaster%2F_notebooks%2F2023-03-16-AP-unit2-4b.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages-sachit-blog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Database-Programming-is-Program-with-Data">Database Programming is Program with Data </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Reading-Users-table-in-Sqlite.db">Reading Users table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Delete-a-User-in-table-in-Sqlite.db">Delete a User in table in Sqlite.db </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Menu-Interface-to-CRUD-operations">Menu Interface to CRUD operations </a></li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h1"><a href="#Debugging-Screenshots-Showing-Understanding-of-Key-Objects">Debugging Screenshots Showing Understanding of Key Objects </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Conn-Object">Conn Object </a></li>
+<li class="toc-entry toc-h3"><a href="#Cursor-Object">Cursor Object </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-16-AP-unit2-4b.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Database-Programming-is-Program-with-Data">
+<a class="anchor" href="#Database-Programming-is-Program-with-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Programming is Program with Data<a class="anchor-link" href="#Database-Programming-is-Program-with-Data"> </a>
+</h1>
+<blockquote>
+<p>Each Tri 2 Final Project should be an example of a Program with Data.</p>
+<p>Prepare to use SQLite in common Imperative Technique</p>
+<ul>
+<li>Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_establishing_connection.htm">SQLite Connect object</a> to establish database connection- Explore <a href="https://www.tutorialspoint.com/python_data_access/python_sqlite_cursor_object.htm">SQLite Cursor Object</a> to fetch data from a table within a database</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Schema-of-Users-table-in-Sqlite.db">
+<a class="anchor" href="#Schema-of-Users-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses PRAGMA statement to read schema.</p>
+</blockquote>
+<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?: A database schema is the organization of data as a blueprint of how the database is constructed.</p>
+<ul>
+<li>What is the purpose of identity Column in SQL database?: The columns in a database contain the attributes of the class that all the entries in the database have.</li>
+<li>What is the purpose of a primary key in SQL database?: A primary key is something that can be used to identify and object or entry in the database. In our case, the uid is unique and can therefore be used to identify a specific user in the database.</li>
+<li>What are the Data Types in SQL table?: Some of the possible data types in an SQL table include strings, integers, floats, and images.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/sqlite.db'</span> <span class="c1"># this is location of database</span>
+
+<span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
+    
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL queries</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Fetch results of Schema</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('users')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="c1"># Print the results</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># Close the database connection</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">schema</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, 'id', 'INTEGER', 1, None, 1)
+(1, '_name', 'VARCHAR(255)', 1, None, 0)
+(2, '_uid', 'VARCHAR(255)', 1, None, 0)
+(3, '_password', 'VARCHAR(255)', 1, None, 0)
+(4, '_dob', 'DATE', 0, None, 0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-Users-table-in-Sqlite.db">
+<a class="anchor" href="#Reading-Users-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading Users table in Sqlite.db<a class="anchor-link" href="#Reading-Users-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQL SELECT statement to read data</p>
+</blockquote>
+<ul>
+<li>What is a connection object? After you google it, what do you think it does? A connection object allows the programmer to connect with the database and interact with it. This way the programmer can search for things, display things, and do so much more with the database.</li>
+<li>Same for cursor object?:After connecting to the sqlite database, the cursor object allows us to search through the database and fetch for different parts of it.- Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?: After using the VSCode debugger, I found that the attributes in the conn object are special variables, function variables, and class variables. Some of the attributes of the cursor object are special variables, function variables, connection, and description.</li>
+<li>Is "results" an object? How do you know?: Yes, results is an object listed under the cursor object. It's an object because it contains data and attributes (like the conn and cursor objects) of each user.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL queries</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM users'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="c1"># Print the results</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Table is empty"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 'Thomas Edison', 'toby', 'sha256$7jEE87mtQgvSbeuM$abb57b85c00ce0521cfdc5eb608c5fb81261870d13c385aef7ec6568e4448c84', '1847-02-11')
+(2, 'Nikola Tesla', 'niko', 'sha256$4e7B1Lpff76p9BRQ$f1818bd9f94b62d7c6d6e2f3426a0234cd4f6e8b27b0ee8a86d8edcac6cf1ece', '2023-03-17')
+(3, 'Alexander Graham Bell', 'lex', 'sha256$V9ZT426BhF6ghSUQ$c538c8d51513e41b1f1ede1d99d922004d7e56a77695a0f7c9cce9ec2ada0efb', '2023-03-17')
+(4, 'Eli Whitney', 'whit', 'sha256$On8knJWX1jTqCukb$4efbba10d347afb5498a1b747280c3e6a5bdeec98171b460441389deb48399aa', '2023-03-17')
+(5, 'prasad', 'sachitcool1', 'sha256$0uPDaRZ6tYyJHQeS$4a4e2939f2d7c20c6385fec2805b4891cf0b8d5764add9612240fd9e766eb698', '1920-10-21')
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-a-new-User-in-table-in-Sqlite.db">
+<a class="anchor" href="#Create-a-new-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQL INSERT to add row</p>
+<ul>
+<li>Compare create() in both SQL lessons. What is better or worse in the two implementations? In both versions, the create function would gather inputs for each attribute of the object from the user and add it to the database a new entry. However, the method in which the program does this is different in the 2 lessons. In the 2.4a lesson, the program used user.create() to create a user, while the 2.4b lesson used cursor.execute and conn.commit() to create a user. The code in 2.4b looks simpler and more compact than the code in 2.4a.</li>
+<li>Explain purpose of SQL INSERT. Is this the same as User <strong>init</strong>?:SQL INSERT takes the values inputted by the user for name, uid, password, and dob and inserts them into a list which represents an entry in the database. It is used to insert these attributes into the database as a new entry.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
+    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
+    
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL commands</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Execute an SQL command to insert data into a table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        
+        <span class="c1"># Commit the changes to the database</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"A new user record </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> has been created"</span><span class="p">)</span>
+                
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the INSERT:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+
+
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">create</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A new user record sachitprasad123 has been created
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Updating-a-User-in-table-in-Sqlite.db">
+<a class="anchor" href="#Updating-a-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQL UPDATE to modify password</p>
+<ul>
+<li>What does the hacked part do?:If the password inputted by the user is shorter than 2 characters, the password is changed to "gothackednewpassword123" as it's a longer and therefore more secure password. The message hacked will also displayed showing that the user selected by the user wasn't secure, so they got hacked.- Explain try/except, when would except occur?: Try except blocks are generally used to check for errors. If the try block doesn't work as intended, the except block runs which usually states that an error occurred with the process being run in the try block.</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated?: In all of these examples, the connect and cursor objects are used to allow us to connect and interact with the database. Without these, we wouldn't be able to access and use use the CRUD operations on the database to edit it. This is why this process is repeated whenever a change (create, update, delete) is needed to be made to the database.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated password"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">"hacked"</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="s1">'gothackednewpassword123'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">"successfully updated"</span>
+
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL commands</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Execute an SQL command to update data in a table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE users SET _password = ? WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># The uid was not found in the table</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the UPDATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+        
+    
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">update</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>No uid  was not found in the table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Delete-a-User-in-table-in-Sqlite.db">
+<a class="anchor" href="#Delete-a-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete a User in table in Sqlite.db<a class="anchor-link" href="#Delete-a-User-in-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses a delete function to remove a user based on a user input of the id.</p>
+<ul>
+<li>Is DELETE a dangerous operation? Why?:Delete is a dangerous operation because once an entry is deleted, it can't be brought back and is lost. This is why it's important to make sure you are deleting the correct entry whenever you use this CRUD operation.- In the print statements, what is the "f" and what does {uid} do?: The "f" is used so we can include variables that aren't strings like "{uid}" so we can print them along side strings. The {uid} displays the uid for an entry in the table. Curly brackets are used to show the value of uid rather than the word itself.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to delete"</span><span class="p">)</span>
+
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL commands</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># The uid was not found in the table</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># The uid was found in the table and the row was deleted</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was successfully deleted"</span><span class="p">)</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the DELETE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+        
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>No uid  was not found in the table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Menu-Interface-to-CRUD-operations">
+<a class="anchor" href="#Menu-Interface-to-CRUD-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu Interface to CRUD operations<a class="anchor-link" href="#Menu-Interface-to-CRUD-operations"> </a>
+</h1>
+<blockquote>
+<p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
+<ul>
+<li>Why does the menu repeat?:The menu repeats to allow the user to select a CRUD operation as many times as they wish until they feel they are satisfied.- Could you refactor this menu?  Make it work with a List?: This menu could be changed to work with a list by storing the different crud operations in a list rather than as in if and elif statements.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="n">operation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter: (C)reate (R)ead (U)pdate or (D)elete or (S)chema"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'c'</span><span class="p">:</span>
+        <span class="n">create</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'r'</span><span class="p">:</span>
+        <span class="n">read</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'u'</span><span class="p">:</span>
+        <span class="n">update</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'d'</span><span class="p">:</span>
+        <span class="n">delete</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">'s'</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># Escape Key</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Please enter c, r, u, or d"</span><span class="p">)</span> 
+    <span class="n">menu</span><span class="p">()</span> <span class="c1"># recursion, repeat menu</span>
+        
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">menu</span><span class="p">()</span> <span class="c1"># start menu</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Perform Jupyter 'Run All' prior to starting menu"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ul>
+<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
+<li>In this implementation, do you see procedural abstraction?:</li>
+</ul>
+<p>Yes, lots of procedural abstraction can be seen in this implementation. The CRUD functions (create, read, update, and delete) divide the program into parts and categorize it by what each part does. Additionally, the menu function basically combines all the functions into one function allowing you to do any CRUD function just by running one code segment. These elements also make it easier to read the program as all the code is in a specific function which is labeled with its purpose rather than a huge block of code where nothing is organized.</p>
+<ul>
+<li>
+<p>In 2.4a or 2.4b lecture</p>
+<ul>
+<li>
+<p>Do you see data abstraction? Complement this with Debugging example.</p>
+<p>Yes, data abstraction is present in both 2.4a and 2.4b as the code is condensed and its internal functions are hidden from the user. When the user wants to create, read, update, or delete from the database, the user simply needs to input a few things at most to get the desired result. In this way, the internal functions are hidden as the user doesn't know what is happening behind the scenes in the program. Also, the code is condensed as everything has a purpose and all the code is grouped well and put where it should be located.</p>
+</li>
+<li>
+<p>Use Imperative or OOP style to Create a new Table or do something that applies to your CPT project.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Reference... <a href="https://www.sqlitetutorial.net/sqlite-python/creating-tables/">sqlite documentation</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Debugging-Screenshots-Showing-Understanding-of-Key-Objects">
+<a class="anchor" href="#Debugging-Screenshots-Showing-Understanding-of-Key-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Debugging Screenshots Showing Understanding of Key Objects<a class="anchor-link" href="#Debugging-Screenshots-Showing-Understanding-of-Key-Objects"> </a>
+</h1>
+<h3 id="Conn-Object">
+<a class="anchor" href="#Conn-Object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conn Object<a class="anchor-link" href="#Conn-Object"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/debugConn.png" alt="Conn Object"></p>
+<h3 id="Cursor-Object">
+<a class="anchor" href="#Cursor-Object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cursor Object<a class="anchor-link" href="#Cursor-Object"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/debugCursor.png" alt="Cursor Object"></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/fastpages-sachit-blog/2023/03/16/AP-unit2-4b.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-sachit-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-sachit-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>This is my VSCode Fastpages project.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
