@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Correcting my incorrect answers on the Big Idea 2 Quiz and reflecting on them.
+description: My experience with the Big Idea 2 Quiz and reflecting on how it was.
 categories: [markdown]
 title: "College Board Big Idea 2 Quiz Corrections"
 ---
@@ -14,7 +14,7 @@ This quiz, I was able to get 25/25 questions correct. I was able to get a good s
 
 # Questions I Found Challenging:
 
-I didn't find any questions particularly challenging as they were all about topics I had either learned about in big idea 2 or topics I already knew about from before. Also, there weren't many questions where silly mistakes could be made as compared to other quizzes and tests where making a small error could result in the entire question being answered wrong.
+I didn't find any questions particularly challenging as they were all about topics I had either learned about in big idea 2 or topics I already knew about from before. Also, there weren't many questions where silly mistakes could be made as compared to other quizzes and tests where making a small error could result in the entire question being answered wrong. I would have talked about and explained a few questions that I found challenging in the quiz, but I didn't find any questions very challenging or noteworthy to talk about.
 
 ### Reflection:
 
