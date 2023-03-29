@@ -112,6 +112,6 @@ Here is an image of Colin and I collaborating on this project:
 
 This gadget works by conducting electricity between the 2 batteries through the wires connecting them. This transmission of electricity between the 2 batteries is what causes the system to vibrate and move across the table in the way that it does. 
 
-### Reflection
+# Reflection
 
 Overall, I found the presentation given by the guest speakers and the activity they planned after the presentation to be very enjoyable. I learned a lot about the Cal State San Marcos and what types of programs they offer. I also learned about things I didn't know much about previously like internships and different ways people can come up with the money to pay for college. I think the speakers did a good job sharing their experiences with Cal State San Marcos and I found what they had to say about it interesting.
