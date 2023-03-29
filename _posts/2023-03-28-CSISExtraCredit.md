@@ -71,10 +71,11 @@ Life after CSUSM:
 - become a teacher
 - A career in a variety of government agencies
 
+<html>
+<iframe src="https://drive.google.com/file/d/1cqV_tHnmKiI43QkgDJ80Z1iwVvvJQcoF/preview" width="640" height="480" allow="autoplay"></iframe>
+</html>
 
-
-
-https://user-images.githubusercontent.com/111467299/228393386-8b077e99-d4e4-47c6-bee8-e75d561b6d48.mov
+![ToothbrushRobot](https://user-images.githubusercontent.com/111467299/228393386-8b077e99-d4e4-47c6-bee8-e75d561b6d48.mov)
 
 
 
