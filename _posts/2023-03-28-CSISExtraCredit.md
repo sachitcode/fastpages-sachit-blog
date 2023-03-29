@@ -74,6 +74,10 @@ Life after CSUSM:
 
 
 
+https://user-images.githubusercontent.com/111467299/228393386-8b077e99-d4e4-47c6-bee8-e75d561b6d48.mov
+
+
+
 
 
 
