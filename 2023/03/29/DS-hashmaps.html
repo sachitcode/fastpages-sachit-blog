@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -189,11 +189,9 @@ window.onload = wrap_img;
 
 <span class="c1"># What do you notice in the output?</span>
 <span class="c1"># The output doesn't contain duplicates (in this case it doesn't the duplicate 1 and 2)</span>
-<span class="c1">#</span>
 
 <span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
-<span class="c1"># They are in the same tech talk because __________</span>
-<span class="c1">#</span>
+<span class="c1"># They are in the same tech talk because hashmaps are commonly used to implement sets.</span>
 </pre></div>
 
     </div>
@@ -263,8 +261,9 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="c1"># What data structures do you see?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># Strings</span>
+<span class="c1"># list</span>
+<span class="c1"># dictionary (inside the lover_album dictionary)</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -369,8 +368,7 @@ The Man
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Jack Antonoff'</span><span class="p">,</span> <span class="s1">'Joel Little'</span><span class="p">,</span> <span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Louis Bell'</span><span class="p">,</span> <span class="s1">'Frank Dukes'</span><span class="p">]</span>
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># we can use set function to get rid of duplicates</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -446,8 +444,9 @@ The Man
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="c1"># k for key and v for value (defined in previous line)</span>
 
 <span class="c1"># Write your own code to print tracks in readable format</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+
+<span class="c1"># print(lover_album['tracks'])</span>
+<span class="c1"># ^ prints tracks</span>
 </pre></div>
 
     </div>
@@ -483,18 +482,25 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def search():</span>
+<span class="c1">#     search = input("What would you like to know about the album?")</span>
+<span class="c1">#     if lover_album.get(search.lower()) == None:</span>
+<span class="c1">#         print("Invalid Search")</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         print(lover_album.get(search.lower()))</span>
+
+<span class="c1"># search()</span>
+
+<span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
+
+<span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
     <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album?"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">search</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"This is not present in this album."</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
 
 <span class="n">search</span><span class="p">()</span>
-
-<span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
 </pre></div>
 
     </div>
@@ -507,7 +513,7 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['Pop', 'Synth-pop']
+<pre>This is not present in this album.
 </pre>
 </div>
 </div>
@@ -549,8 +555,14 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 <h3 id="Favorite-Taylor-Swift-Song">
 <a class="anchor" href="#Favorite-Taylor-Swift-Song" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Taylor Swift Song<a class="anchor-link" href="#Favorite-Taylor-Swift-Song"> </a>
 </h3>
-<p>Song Name: Love Story</p>
-<p>Why this song is my favorite Taylor Swift song: Even though the name of this song is a little, weird, I like how this song sounds. Whenever I listen to this song, it reminds me of when I learned about the Romeo and Juliet play in english last year.</p>
+<p><strong>Song Name: Love Story</strong></p>
+<p><strong><em>About the song:</em></strong></p>
+<p>This song is a pop song that is part of the fearless album and was released in the year 2008. It has won many awards and nominations over the many years it has been around.</p>
+<p><strong><em>Why this song is my favorite Taylor Swift song:</em></strong></p>
+<p>Even though the name of this song is a little, weird, I like how this song sounds. Whenever I listen to this song, it reminds me of when I learned about the Romeo and Juliet play in english last year. With this knowledge of the Romeo and Juliet play, I understand more about what the song communicates. I also like how has many moments where is builds up to the best part of the song.</p>
+<p><strong><em>Lyrics:</em></strong></p>
+<p><a href="">https://www.azlyrics.com/lyrics/taylorswift/lovestory.html</a></p>
+<p><strong><em>Music Video:</em></strong></p>
 
 <iframe src="https://drive.google.com/file/d/1U578fUZ_-zCqt1q3IjA4ATZaia8HWJHs/preview" width="640" height="480" allow="autoplay"></iframe>
 
