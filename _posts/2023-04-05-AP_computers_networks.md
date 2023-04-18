@@ -218,3 +218,15 @@ Answer: The answer is answer C because even though it's true that only one route
 ![]({{site.baseurl}}/images/network5.png "Problem 5")
 
 Answer: A connection from A to B would make this network fault tolerant because then each computer will have at least 2 connections. This way, when any connection is removed, every computer will still have access to every other computer.
+
+## 4.1.2 Video True or False
+
+![]({{site.baseurl}}/images/TrueorFalse.png "Questions")
+
+1. T
+2. F
+3. F
+4. T
+5. F
+6. F
+7. T
