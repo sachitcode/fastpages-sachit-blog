@@ -224,9 +224,9 @@ Answer: A connection from A to B would make this network fault tolerant because 
 ![]({{site.baseurl}}/images/TrueorFalse.png "Questions")
 
 1. T
-2. F
-3. F
+2. F (not designed to keep manufacturers out of the internet)
+3. F (not predetermined and are very flexible, can't be predetermined because of potential connections not being available)
 4. T
-5. F
-6. F
-7. T
+5. F (faster but does not guarantee transfer)
+6. F (not the same)
+7. T 
