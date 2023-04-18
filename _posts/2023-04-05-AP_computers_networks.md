@@ -166,7 +166,30 @@ print(result)
 
 ## Answering Questions
 
+List specification of your Computer, or Computers if working as Pair/Trio
+- Processor GHz: The number of cycles the CPU executes per second. This number is measured in GHz (gigahertz).
+- Memory in GB: Memory (measured in GB (gigabytes)) is data stored by the computer for it to be stored and accessed later.
+- Storage in GB: Storage is used to store data and the data is stored in GB (gigabytes).
+- OS: A software that supports a computer's basic functions. This is different for different computers made by different companies. Example: MacOS
 
+Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
+- Input devices: An input device is a device that provides information by a user. Some examples are a keyboard and a mouse.
+- Output devices: An output device is a device that displays an output in a certain form. An example of an output device is a speaker.
+- Program File: A program file is a file or directory that is used to store a program that is to be run.
+- Program Code: Instructions that are given to a machine to create a computer program.
+- Processes: A process run on a computer to complete a specific task.
+- Ports: A virtual point where network connections start and end. Different programs use different ports.
+- Data File: A data file contains contains various data about a certain topic (data can be in different forms such as lists and strings).
+- Inspect Running Code: This allows you to debug your code for any errors
+- Inspect Variables: Where debuggers can be used to check the values of variables.
+
+Vocab:
+- Path: A path is a used to identify a location or directory.
+- Route: A route is the way information is sent along a path.
+- Computer System: A computer system can accept inputs, store data, and provide outputs.
+- Computer Device: A computer device is a device that can be connected to the internet to transmit and accept data.
+- Bandwidth: Bandwidth is the maximum amount of data that can be transferred at one time.
+- Computer Network: A computer network is when many different computers and connected and can send information to each other in the form of packets.
 
 ## 4.2 Videos Practice Problems
 
