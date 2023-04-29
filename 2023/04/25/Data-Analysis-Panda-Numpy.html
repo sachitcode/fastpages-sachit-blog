@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      19 min read
+      20 min read
     
 </span></p>
 
@@ -1633,6 +1633,48 @@ total_rooms
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Maximum Name Length: Sophia
 Minimum Name Length: Ben
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">,</span> <span class="p">[</span><span class="s1">'./files/people.csv'</span><span class="p">,</span> <span class="s1">'./files/short.csv'</span><span class="p">]),</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Name   Age   Grade   GPA
+0   Billy    15      10  4.11
+1   Bobby    16      10  3.56
+2   Henry    17      12  4.65
+3   Bryan    14       9  3.12
+4  Sophia    17      11  4.01
+5     Ben    17      12  2.21
+6   Emily    15       9  3.87
+7   Flint    14       9  3.11
+8    Bill    17      11  3.96
+9   Maria    16      11  4.15
 </pre>
 </div>
 </div>
