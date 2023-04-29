@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      19 min read
     
 </span></p>
 
@@ -1526,6 +1526,23 @@ total_rooms
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1535,6 +1552,65 @@ total_rooms
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Random Number Generator:</span>
+
+<span class="n">randomNum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># This will generate a random number from 1 to 10 (including 1, but not including 10)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Random Number: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">randomNum</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Multi-Dimensional Array:</span>
+
+<span class="n">multiDimensional</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  <span class="c1"># creates a multi-dimensional array with 3 rows and 4 columns that are made up of the number 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Multi-Dimensional Array:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multiDimensional</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Array with linearly spaced intervals between values:</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Array with Linearly Spaced Intervals Between Values:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># Divides interval from 1 to 10 into 4 numbers (1, 4, 7, 10) </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Random Number: 5
+
+
+Multi-Dimensional Array:
+[[1. 1. 1. 1.]
+ [1. 1. 1. 1.]
+ [1. 1. 1. 1.]]
+
+
+Array with Linearly Spaced Intervals Between Values:
+[ 1.  4.  7. 10.]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
