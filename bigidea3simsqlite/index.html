@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      27 min read
+      28 min read
     
 </span></p>
 
@@ -188,7 +188,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#An-Alternative-Method-of-Making-SQLite-Databases">An Alternative Method of Making SQLite Databases </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Database-Homework">Database Homework </a></li>
+<li class="toc-entry toc-h2"><a href="#Database-Homework">Database Homework </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Proof-of-Database">Proof of Database </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Grading">Grading </a></li>
@@ -1573,7 +1577,7 @@ The number 6 was rolled 1683 times.
 <h1 id="Databases">
 <a class="anchor" href="#Databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Databases<a class="anchor-link" href="#Databases"> </a>
 </h1>
-<p>We have already gone over databases in this class, but here is a refresher. A database contains data that's <strong><strong><em>__</em></strong></strong>. The information in this database can then be <strong>__</strong> from the database and can be used in a program.</p>
+<p>We have already gone over databases in this class, but here is a refresher. A database contains data that's stored in columns and rows. The information in this database can then be pulled from the database and can be used in a program.</p>
 <h2 id="Setting-Up-the-Database">
 <a class="anchor" href="#Setting-Up-the-Database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up the Database<a class="anchor-link" href="#Setting-Up-the-Database"> </a>
 </h2>
@@ -1790,9 +1794,9 @@ The number 6 was rolled 1683 times.
 <p>Setters and Getters are important methods used when writing code for databases.</p>
 <ul>
 <li>
-<strong>Setter</strong>: a method that allows us to <strong>___</strong> the value of an attribute in a class.</li>
+<strong>Setter</strong>: a method that allows us to set or change the value of an attribute in a class.</li>
 <li>
-<strong>Getter</strong>: a method that allows us to <strong><em>__</em></strong> an attribute in a given class.</li>
+<strong>Getter</strong>: a method that allows us to access an attribute in a given class.</li>
 </ul>
 <h3 id="Setter-Example">
 <a class="anchor" href="#Setter-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setter Example<a class="anchor-link" href="#Setter-Example"> </a>
@@ -1857,7 +1861,7 @@ The number 6 was rolled 1683 times.
 <ul>
 <li>it acts as a messenger that allows programs to access data from the others </li>
 <li>it connects all information </li>
-<li>for a database, an api <strong><strong>_</strong></strong> the data requested in code for the user </li>
+<li>for a database, an api retrieves the data requested in code for the user</li>
 </ul>
 
 </div>
@@ -2003,17 +2007,91 @@ The number 6 was rolled 1683 times.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you've already run the db.init_app(app) function while in this notebook,</span>
-<span class="c1"># don't do it again until you've closed it!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">create_database</span><span class="p">():</span>
+    <span class="c1"># Connect to the database (will create it if it doesn't exist)</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/subjects.db'</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+    <span class="c1"># Create the subjects table if it doesn't already exist</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'''CREATE TABLE IF NOT EXISTS subjects (</span>
+<span class="s1">                    subject TEXT,</span>
+<span class="s1">                    teacher TEXT,</span>
+<span class="s1">                    rating REAL,</span>
+<span class="s1">                    difficulty TEXT</span>
+<span class="s1">                )'''</span><span class="p">)</span>
+
+    <span class="c1"># Commit changes and close the connection</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Call the function to create the database</span>
+<span class="n">create_database</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+   <span class="n">database</span> <span class="o">=</span> <span class="s1">'instance/subjects.db'</span>
+   <span class="n">subject</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the subject: "</span><span class="p">)</span>
+   <span class="n">teacher</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the teacher who teaches this subject: "</span><span class="p">)</span>
+   <span class="n">rating</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"How would you rate this subject (1 - 10): "</span><span class="p">)</span>
+   <span class="n">difficulty</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter how you would rate this subject's difficulty: "</span><span class="p">)</span>
+
+
+   <span class="c1"># Connect to the database and create a cursor to execute SQL commands</span>
+   <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+   <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+
+   <span class="k">try</span><span class="p">:</span>
+       <span class="c1"># Execute SQL to insert record into db</span>
+       <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO subjects (subject, teacher, rating, difficulty) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">rating</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">))</span>
+       <span class="c1"># Commit the changes</span>
+       <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+       <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2"> has been added to the list of subjects."</span><span class="p">)</span>
+              
+   <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while inserting record"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+
+
+   <span class="c1"># Close cursor and connection</span>
+   <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+   <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">create</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Humanities has been added to the list of subjects.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Proof-of-Database">
+<a class="anchor" href="#Proof-of-Database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof of Database<a class="anchor-link" href="#Proof-of-Database"> </a>
+</h3>
+<p><img src="/fastpages-sachit-blog/images/copied_from_nb/images/subjectsDatabase.png" alt="Subjects Database"></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
