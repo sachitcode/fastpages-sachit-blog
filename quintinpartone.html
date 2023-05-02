@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Developing with Frontend &amp; Backend | Sachits Fastpages Project</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Developing with Frontend &amp; Backend" />
+<meta name="author" content="Paaras Purohit, Chinmay Ramamurthy, Raunak Mondal, Tanay Patel, Qais Jamili" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To get started with development, you need tools. You’ll learn how to get the necessary tools here using Conda scripts." />
+<meta property="og:description" content="To get started with development, you need tools. You’ll learn how to get the necessary tools here using Conda scripts." />
+<link rel="canonical" href="https://sachitcode.github.io/fastpages-sachit-blog/quintinpartone" />
+<meta property="og:url" content="https://sachitcode.github.io/fastpages-sachit-blog/quintinpartone" />
+<meta property="og:site_name" content="Sachits Fastpages Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-18T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Developing with Frontend &amp; Backend" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Paaras Purohit, Chinmay Ramamurthy, Raunak Mondal, Tanay Patel, Qais Jamili"},"dateModified":"2023-04-18T00:00:00-05:00","datePublished":"2023-04-18T00:00:00-05:00","description":"To get started with development, you need tools. You’ll learn how to get the necessary tools here using Conda scripts.","headline":"Developing with Frontend &amp; Backend","mainEntityOfPage":{"@type":"WebPage","@id":"https://sachitcode.github.io/fastpages-sachit-blog/quintinpartone"},"url":"https://sachitcode.github.io/fastpages-sachit-blog/quintinpartone"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-sachit-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml" title="Sachits Fastpages Project" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-sachit-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-sachit-blog/">Sachits Fastpages Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages-sachit-blog/vocab/">Vocab</a><a class="page-link" href="/fastpages-sachit-blog/categories/">Tags</a><a class="page-link" href="/fastpages-sachit-blog/search/">Search</a><a class="page-link" href="/fastpages-sachit-blog/about/">About Me</a><a class="page-link" href="/fastpages-sachit-blog/submenu/">Submenu</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Developing with Frontend &amp; Backend</h1><p class="page-description">To get started with development, you need tools. You'll learn how to get the necessary tools here using Conda scripts.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-18T00:00:00-05:00" itemprop="datePublished">
+        Apr 18, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Paaras Purohit, Chinmay Ramamurthy, Raunak Mondal, Tanay Patel, Qais Jamili</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages-sachit-blog/categories/#student">student</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Setting-up-Machines-with-Conda-Scripts">Setting up Machines with Conda Scripts </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#GitHub">GitHub </a></li>
+<li class="toc-entry toc-h2"><a href="#Two-Main-Machines">Two Main Machines </a></li>
+<li class="toc-entry toc-h2"><a href="#Our-Tools:">Our Tools: </a></li>
+<li class="toc-entry toc-h2"><a href="#Actual-Installations:">Actual Installations: </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#MacOS-Conda-Scripts">MacOS Conda Scripts </a></li>
+<li class="toc-entry toc-h3"><a href="#Windows-Conda-Scripts">Windows Conda Scripts </a></li>
+<li class="toc-entry toc-h3"><a href="#Setting-Up-Kernels">Setting Up Kernels </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Before-We-Set-Up-Pages,-A-Guide-to-Git">Before We Set Up Pages, A Guide to Git </a></li>
+<li class="toc-entry toc-h2"><a href="#Setting-Up-GitHub-Pages">Setting Up GitHub Pages </a></li>
+<li class="toc-entry toc-h2"><a href="#Setting-Up-FastPages">Setting Up FastPages </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Video-of-Working-Project">Video of Working Project </a></li>
+<li class="toc-entry toc-h3"><a href="#Frontend-Code">Frontend Code </a></li>
+<li class="toc-entry toc-h3"><a href="#Backend-Code">Backend Code </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-18-quintinpartone.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Setting-up-Machines-with-Conda-Scripts">
+<a class="anchor" href="#Setting-up-Machines-with-Conda-Scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up Machines with Conda Scripts<a class="anchor-link" href="#Setting-up-Machines-with-Conda-Scripts"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GitHub">
+<a class="anchor" href="#GitHub" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub<a class="anchor-link" href="#GitHub"> </a>
+</h2>
+<ul>
+<li>What is GitHub?: GitHub is a software company which allows for users to create their own programming projects and collaborate with others if they so desire.</li>
+<li>Why do we use GitHub? Why not Google Drive or messages? GitHub is better for creating programming projects and storing code. Google drive is not very useful for storing code as the code will not be formatted correctly and can't be run.</li>
+<li>What's the difference between Git and GitHub? Git is the version control system while GitHub is the service that stores code and makes it accessible to many people. </li>
+<li>Name as many Git commands as you can: Git push, git merge, git pull, git fork, git clone</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Two-Main-Machines">
+<a class="anchor" href="#Two-Main-Machines" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two Main Machines<a class="anchor-link" href="#Two-Main-Machines"> </a>
+</h2>
+<ul>
+<li>
+<p>Which is better, MacOS or Windows?
+Both MacOs and Windows are better in their own ways. Mac is better that Windows in that it is easier to navigate to different applications and sites (in my opinion). I don't use Windows, so I don't have any reasons why it would be better. I prefer MacOS over Windows.</p>
+</li>
+<li>
+<p>Give some differences between MacOS and Windows in terms of the development we use in APCSP:</p>
+</li>
+</ul>
+<p>I'm not sure about how things are done with Windows as I use mac, but I know that things are installed differently on windows</p>
+<ul>
+<li>If you are on Windows, you want to skip the MacOS Setup instructions.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Our-Tools:">
+<a class="anchor" href="#Our-Tools:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our Tools:<a class="anchor-link" href="#Our-Tools:"> </a>
+</h2>
+<ul>
+<li>
+<p>What is the first tool you remember installing?
+Im not sure if this is the first tool I installed, but one of the first tools I installed was VSCode.</p>
+</li>
+<li>
+<p>Why were installations so hard the first time?
+Installations were hard during the first few weeks of CSP as I didn't know what I was doing and wasn't used to installing new things.</p>
+</li>
+<li>
+<p>Without looking back at previous notes, name three tools you remember installing. This can be kernels, extensions, any installation for APCSP, and also write why it is needed.</p>
+</li>
+</ul>
+<ol>
+<li>Python and JavaScript Kernels - Needed so I can code in python and javascript</li>
+<li>VSCode - Allows me to write code in different files, work on many different repositories at a time, and create blog posts</li>
+<li>Docker - Allows me to local host my projects to quickly see what my changes do</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Actual-Installations:">
+<a class="anchor" href="#Actual-Installations:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Actual Installations:<a class="anchor-link" href="#Actual-Installations:"> </a>
+</h2>
+<p>Tool setup is a week 0 thing. You should already have the knowledge to set up your machine. There is also a high chance you had to remove your environments and set up your machine again due to errors. If, for some reason, these don't apply to you, go <a href="https://nighthawkcoders.github.io/APCSP//techtalk/tools">here</a> to set up your machine, <a href="https://nighthawkcoders.github.io/APCSP//techtalk/bash">here</a> to check everything working with Bash, and <a href="https://nighthawkcoders.github.io/APCSP//c7.1/2022/09/12/PBL-fastpages-docker.html">here</a> for Docker setup, which are the main tools on our machine needed to develop in APCSP.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="MacOS-Conda-Scripts">
+<a class="anchor" href="#MacOS-Conda-Scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>MacOS Conda Scripts<a class="anchor-link" href="#MacOS-Conda-Scripts"> </a>
+</h3>
+<p>After installing Homebrew, VSCode, and Python2, you'll need to run these Homebrew commands:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>brew list <span class="c1"># list packages</span>
+brew update <span class="c1"># update package list</span>
+brew upgrade <span class="c1"># upgrade packages</span>
+brew install git  <span class="c1"># install latest git</span>
+brew install python <span class="c1"># install python3 for development</span>
+python --version <span class="c1"># version of python3 installed</span>
+brew install java <span class="c1"># openjdk install</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Windows-Conda-Scripts">
+<a class="anchor" href="#Windows-Conda-Scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows Conda Scripts<a class="anchor-link" href="#Windows-Conda-Scripts"> </a>
+</h3>
+<p>To get set up, run these commands:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>wsl --install
+wsl --list
+wsl --install -d Ubuntu-20.04
+<span class="c1"># restart machine</span>
+wsl
+<span class="nb">cd</span> ~
+mkdir vscode
+ls
+<span class="nb">cd</span> ~/vscode  <span class="c1"># changes the directory to path for vscode files</span>
+git clone https://github.com/nighthawkcoders/APCSP.git <span class="c1"># clone repo</span>
+<span class="nb">cd</span> APCSP  <span class="c1"># changes the directory to path for APCSP repos assets</span>
+code .  <span class="c1"># opens APCSP in VSCode</span>
+<span class="nb">cd</span> ..    <span class="c1"># changes the directory to the previous/parent directory</span>
+git config --global user.email mygmail@gmail.com  <span class="c1"># tell git your email</span>
+git config --global user.name mygithub   <span class="c1"># tell git your github id</span>
+shay@MSI:/mnt/c/Users/ShayM$ git config --global user.email your@email.here
+shay@MSI:/mnt/c/Users/ShayM$ git config --global user.name yourusernamehere
+<span class="c1"># restart machine</span>
+PS C:<span class="se">\U</span>sers<span class="se">\U</span>serName&gt; wsl  <span class="c1"># Windows prompt to WSL command</span>
+<span class="nb">cd</span> /tmp
+wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+chmod +x Anaconda3-2022.05-Linux-x86_64.sh
+<span class="c1"># Answer yes to all the prompts</span>
+./Anaconda3-2022.05-Linux-x86_64.sh
+<span class="c1"># run apt package commands now</span>
+sudo apt list <span class="c1"># list packages</span>
+sudo apt update <span class="c1"># update package list</span>
+sudo apt upgrade <span class="c1"># upgrade packages</span>
+sudo apt install python2 <span class="c1"># install python2 for package dependencies</span>
+sudo apt install python3 python3-pip <span class="c1"># install python3 and pip3 for development</span>
+python --version  <span class="c1"># version of python3 should be shown</span>
+sudo apt install default-jdk default-jre  <span class="c1"># java install</span>
+java --version  <span class="c1"># java runtime version</span>
+javac --version <span class="c1"># java compiler version</span>
+sudo apt install unzip  <span class="c1"># unzip utility</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setting-Up-Kernels">
+<a class="anchor" href="#Setting-Up-Kernels" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up Kernels<a class="anchor-link" href="#Setting-Up-Kernels"> </a>
+</h3>
+<p>Now that you have everything installed on MacOS/Windows, we need to get kernels installed so that we can develop inside Fastpages notebooks. To do that, run these commands on both MacOS and Windows:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span><span class="o">(</span>base<span class="o">)</span> id:~$ conda --version 
+<span class="o">(</span>base<span class="o">)</span> id:~$ conda install jupyter <span class="c1"># install jupyter</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ jupyter kernelspec list <span class="c1"># list installed kernels</span>
+Available kernels:
+  python3    /home/shay/.local/share/jupyter/kernels/python3
+
+<span class="o">(</span>base<span class="o">)</span> id:~$ <span class="c1"># start in home directory</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ pip install bash_kernel <span class="c1"># download bash kernel</span>
+Collecting bash_kernel
+  Downloading bash_kernel-0.7.2-py2.py3-none-any.whl <span class="o">(</span><span class="m">15</span> kB<span class="o">)</span>
+Requirement already satisfied: pexpect&gt;<span class="o">=</span><span class="m">4</span>.0 in ./anaconda3/lib/python3.9/site-packages <span class="o">(</span>from bash_kernel<span class="o">)</span> <span class="o">(</span><span class="m">4</span>.8.0<span class="o">)</span>
+Requirement already satisfied: ptyprocess&gt;<span class="o">=</span><span class="m">0</span>.5 in ./anaconda3/lib/python3.9/site-packages <span class="o">(</span>from pexpect&gt;<span class="o">=</span><span class="m">4</span>.0-&gt;bash_kernel<span class="o">)</span> <span class="o">(</span><span class="m">0</span>.7.0<span class="o">)</span>
+Installing collected packages: bash-kernel
+Successfully installed bash-kernel-0.7.2
+<span class="o">(</span>base<span class="o">)</span> id:~$ python -m bash_kernel.install <span class="c1"># install kernel</span>
+Installing IPython kernel spec
+<span class="o">(</span>base<span class="o">)</span> id:~$ jupyter kernelspec list <span class="c1"># list kernels</span>
+Available kernels:
+  bash       /home/shay/.local/share/jupyter/kernels/bash
+  python3    /home/shay/.local/share/jupyter/kernels/python3
+
+<span class="o">(</span>base<span class="o">)</span> id:~$ conda install nodejs <span class="c1"># node is framework for JavaScript kernel</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ npm -version  <span class="c1"># node package manager comes with nodejs</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ npm install -g ijavascript  <span class="c1"># get the kernel</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ ijsinstall <span class="c1"># install javascript kernel</span>
+<span class="o">(</span>base<span class="o">)</span> id:~$ jupyter kernelspec list <span class="c1"># list kernels</span>
+Available kernels:
+  bash          /home/shay/.local/share/jupyter/kernels/bash
+  javascript    /home/shay/.local/share/jupyter/kernels/javascript
+  python3       /home/shay/.local/share/jupyter/kernels/python3
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By now, you should already know how to clone Git repositories into your VSCode directory. Once you do that, you're all set for developing with GitHub Pages and Fastpages!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Before-We-Set-Up-Pages,-A-Guide-to-Git">
+<a class="anchor" href="#Before-We-Set-Up-Pages,-A-Guide-to-Git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Before We Set Up Pages, A Guide to Git<a class="anchor-link" href="#Before-We-Set-Up-Pages,-A-Guide-to-Git"> </a>
+</h2>
+<p>As we've discussed, Git is different from GitHub. Because GitHub is merely the place where we store Git repos, we use Git's commands to help us get, open, and configure these repositories. Here are some of the Git commands you should be using a lot (In the comments, tell what each Git command does):</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>git clone <span class="o">{</span>repos-name-here.git<span class="o">}</span> <span class="c1"># what does it do? --&gt; allows you to make a copy of a repository that you can edit and modify</span>
+git checkout <span class="o">[</span>branch<span class="o">]</span> <span class="c1"># what does it do? --&gt; allows you to create a local branch</span>
+git fork <span class="o">{</span>repos-name-here.git<span class="o">}</span> <span class="c1"># what does it do? --&gt; similar to git clone, but this copy is not affected by changed made to the original repository</span>
+git commit -m <span class="o">{</span><span class="s2">"commit-msg"</span><span class="o">}</span> <span class="c1"># what does it do? --&gt; allows you to save changes to the repository locally</span>
+git pull <span class="c1"># what does it do? --&gt; allows you to pull changes that have been made by others to the remote repository</span>
+git push <span class="c1"># what does it do? --&gt; allows you to sync your changes with the remote repository</span>
+
+<span class="c1"># After this line, name other commands that you can use and what they do. This should be easy, as you've already answered the qeue</span>
+git merge <span class="c1"># --&gt; used to merge your local changes with what is the the remote repository</span>
+git log <span class="c1"># --&gt; allows you to view the history of changes of the repository</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setting-Up-GitHub-Pages">
+<a class="anchor" href="#Setting-Up-GitHub-Pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up GitHub Pages<a class="anchor-link" href="#Setting-Up-GitHub-Pages"> </a>
+</h2>
+<p>Some of you may have come to know that GitHub Pages is starting to become outdated. So why do we still use it? The answer is that we are in a class, and following a curriculum with something like GitHub Pages is much easier than creating portfolio content from scratch, which becomes quite unecessary. Therefore, we can use GitHub Pages to create this content instead. On the topic of unecessary vs necessary coding, we don't need to make GitHub Pages from scratch as opposed to using a template that our very own Mr. Mortensen created for us. To do that, we can go to the <a href="https://github.com/jm1021/leuck_reunion">Leuck Reunion</a> repository and use the template to make our own GitHub Pages. Then, in Ubuntu, we can <code>git clone</code> our repository and open it in VSCode. After we have it open, the last thing we want to do is set up local hosting for this website, so that we can preview it and make changes in real time. To do that, head <a href="https://jekyllrb.com/docs/installation/ubuntu/">here</a> to install Jekyll for Ubuntu, <a href="https://www.ruby-lang.org/en/documentation/installation/">here</a> to install Ruby next, and <a href="https://bundler.io/">here</a> to finalize the process by installing Bundler.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setting-Up-FastPages">
+<a class="anchor" href="#Setting-Up-FastPages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up FastPages<a class="anchor-link" href="#Setting-Up-FastPages"> </a>
+</h2>
+<p>In Setting Up Github Pages, we talked about how it is easier to use a template to create portfolio content. It is also easier to use a template when creating the portfolio itself. To do that, we can use Fastpages, which is what we have been using to show our blogs, code, and projects. However, Fastpages has been deprecated for some time now, so the instructions in Week 0 won't be effective. So, we need to fork the APCSP Fastpages. To do that, follow <a href="">this</a> video to get started developing with Fastpages.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ul>
+<li>Show how you incorporate three tools that we have installed into your project. 0.1 points for each feature. (0.3). This can include code, but definitely blog about it.</li>
+</ul>
+<ol>
+<li>
+<p>VSCode:
+I used VSCode as my code browsing tool to develop the code for my projects and local host it to find and fix errors in my code. VSCode is also very helpful with debugging.</p>
+</li>
+<li>
+<p>Python and JavaScript Kernels:
+The API and database part of my code is created with the python kernel. The JavaScript kernel was used to code the frontend JavaScript part of my code with which the user interacts with.</p>
+</li>
+<li>
+<p>Docker:
+I used docker to local host my project and find errors that may have arisen. With local hosting, it's very easy to find these errors and find out how they can be fixed. It's also useful to keep track of my progress and how functional the code is.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Video-of-Working-Project">
+<a class="anchor" href="#Video-of-Working-Project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Video of Working Project<a class="anchor-link" href="#Video-of-Working-Project"> </a>
+</h3>
+<p>Project: <a href="https://drive.google.com/file/d/10RY5U8aQ-4FfUBWQhIvrgwG0BqM4KwFp/view?usp=sharing">Link</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Frontend-Code">
+<a class="anchor" href="#Frontend-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Frontend Code<a class="anchor-link" href="#Frontend-Code"> </a>
+</h3>
+<p>This code will present the data stored in the database to the user. This will also take in the user's input, calculate the output, and present the output to the user which will then be stored in the database with the backend code.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>&lt;style&gt;
+    h1 <span class="o">{</span>
+        color: blue<span class="p">;</span>
+        margin-bottom: 60px<span class="p">;</span>
+        font-family<span class="p">;</span> georgia<span class="p">;</span>
+        text-align: center<span class="p">;</span>
+    <span class="o">}</span>
+
+    iframe <span class="o">{</span>
+        width: <span class="m">90</span>%<span class="p">;</span>
+        height: fixed<span class="p">;</span>
+        filter: invert<span class="o">(</span><span class="m">75</span>%<span class="o">)</span><span class="p">;</span>
+    <span class="o">}</span>
+
+    .content<span class="o">{</span>
+        display: flex<span class="p">;</span>
+        justify-content: center<span class="p">;</span>
+        flex-direction: column<span class="p">;</span>
+    <span class="o">}</span>
+
+    .content&gt;*<span class="o">{</span>
+        padding: 10px<span class="p">;</span>
+    <span class="o">}</span>
+&lt;/style&gt;
+
+
+&lt;div <span class="nv">id</span><span class="o">=</span><span class="s1">'content'</span>&gt;
+&lt;form <span class="nv">id</span><span class="o">=</span><span class="s1">'nameForm'</span>&gt;
+&lt;div <span class="nv">class</span><span class="o">=</span><span class="s1">'form-uname'</span>&gt;
+    &lt;label <span class="nv">id</span><span class="o">=</span><span class="s1">'nameLable'</span> <span class="k">for</span><span class="o">=</span><span class="s1">'nameField'</span>&gt;Input the City:&lt;/label&gt;
+    &lt;input <span class="nv">id</span><span class="o">=</span><span class="s1">'nameField'</span> <span class="nv">type</span><span class="o">=</span><span class="s1">'text'</span> <span class="nv">maxlength</span><span class="o">=</span><span class="s1">'25'</span>&gt;
+&lt;/div&gt;
+&lt;div <span class="nv">class</span><span class="o">=</span><span class="s1">'form-sub'</span>&gt;
+    &lt;button <span class="nv">id</span><span class="o">=</span><span class="s1">'subButton'</span> <span class="nv">type</span><span class="o">=</span><span class="s1">'button'</span>&gt;Submit!&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;div <span class="nv">id</span><span class="o">=</span><span class="s2">"text"</span>&gt;&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;p <span class="nv">id</span><span class="o">=</span><span class="s1">'result'</span>&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script <span class="nv">type</span><span class="o">=</span><span class="s2">"text/javascript"</span>&gt;
+
+<span class="nv">latitude</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="nv">longitude</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+
+// add code to get city name from user
+
+<span class="k">function</span> getUserName<span class="o">()</span> <span class="o">{</span>
+var <span class="nv">nameField</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'nameField'</span><span class="o">)</span>.value<span class="p">;</span>
+var <span class="nv">result</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'result'</span><span class="o">)</span><span class="p">;</span>
+
+const <span class="nv">options</span> <span class="o">=</span> <span class="o">{</span>
+	method: <span class="s1">'GET'</span>,
+	headers: <span class="o">{</span>
+		<span class="s1">'X-Access-Token'</span>: <span class="s1">'c203885d962780e0f71c0a1e65db31e3'</span>,
+		<span class="s1">'X-RapidAPI-Key'</span>: <span class="s1">'f56b20ef1cmsh82a127be1b400c6p1e21bcjsn093efcf02b8f'</span>,
+		<span class="s1">'X-RapidAPI-Host'</span>: <span class="s1">'travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com'</span>
+	<span class="o">}</span>
+<span class="o">}</span><span class="p">;</span>
+
+fetch<span class="o">(</span><span class="s1">'https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/data/en-GB/cities.json'</span>, options<span class="o">)</span>
+	.then<span class="o">(</span><span class="nv">response</span> <span class="o">=</span>&gt; response.json<span class="o">())</span>
+	.then<span class="o">(</span><span class="nv">response</span> <span class="o">=</span>&gt; <span class="o">{</span>
+        console.log<span class="o">(</span>response<span class="o">)</span>
+
+var <span class="nv">dictionary</span> <span class="o">=</span> <span class="m">0</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="nb">let</span> <span class="nv">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> i &lt; response.length<span class="p">;</span> i++<span class="o">){</span>
+    <span class="k">if</span> <span class="o">(</span>response<span class="o">[</span>i<span class="o">][</span><span class="s1">'name'</span><span class="o">]</span> <span class="o">==</span> nameField<span class="o">){</span>
+        <span class="nv">dictionary</span> <span class="o">=</span> response<span class="o">[</span>i<span class="o">]</span>
+        console.log<span class="o">(</span>dictionary<span class="o">)</span> 
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="nv">dictionary</span> <span class="o">==</span> <span class="m">0</span><span class="o">){</span>
+    const <span class="nv">textDiv</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'text'</span><span class="o">)</span><span class="p">;</span>    
+    const <span class="nv">p</span> <span class="o">=</span> document.createElement<span class="o">(</span><span class="s1">'P'</span><span class="o">)</span><span class="p">;</span>
+    const <span class="nv">pText</span> <span class="o">=</span> document.createTextNode<span class="o">(</span><span class="s2">"City not found."</span><span class="o">)</span><span class="p">;</span>
+    textDiv.appendChild<span class="o">(</span>p<span class="o">)</span><span class="p">;</span>
+    p.appendChild<span class="o">(</span>pText<span class="o">)</span><span class="p">;</span>
+
+<span class="o">}</span>
+
+// add code to search <span class="k">for</span> the user input city in the API response and fetch latitude and longitude <span class="k">for</span> it
+
+        <span class="nv">latitude</span> <span class="o">=</span> dictionary.coordinates.lat
+        <span class="nv">longitude</span> <span class="o">=</span> dictionary.coordinates.lon
+
+        <span class="nv">url</span> <span class="o">=</span> <span class="s1">'https://aerodatabox.p.rapidapi.com/airports/search/location/'</span> + latitude + <span class="s1">'/'</span> + longitude + <span class="s1">'/km/50/16?withFlightInfoOnly=false'</span>
+
+        const <span class="nv">textDiv</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'text'</span><span class="o">)</span><span class="p">;</span>
+        
+        const <span class="nv">p</span> <span class="o">=</span> document.createElement<span class="o">(</span><span class="s1">'P'</span><span class="o">)</span><span class="p">;</span>
+        const <span class="nv">pText</span> <span class="o">=</span> document.createTextNode<span class="o">(</span><span class="s1">''</span><span class="o">)</span><span class="p">;</span>
+
+        textDiv.appendChild<span class="o">(</span>p<span class="o">)</span><span class="p">;</span>
+        p.appendChild<span class="o">(</span>pText<span class="o">)</span><span class="p">;</span>
+
+        const <span class="nv">aerodataboxOptions</span> <span class="o">=</span> <span class="o">{</span>
+            method: <span class="s1">'GET'</span>,
+            headers: <span class="o">{</span>
+                <span class="s1">'X-RapidAPI-Key'</span>: <span class="s1">'f56b20ef1cmsh82a127be1b400c6p1e21bcjsn093efcf02b8f'</span>,
+                <span class="s1">'X-RapidAPI-Host'</span>: <span class="s1">'aerodatabox.p.rapidapi.com'</span>
+            <span class="o">}</span>
+        <span class="o">}</span><span class="p">;</span>
+
+    fetch<span class="o">(</span>url, aerodataboxOptions<span class="o">)</span>
+        .then<span class="o">(</span><span class="nv">response</span> <span class="o">=</span>&gt; response.json<span class="o">())</span>
+        .then<span class="o">(</span><span class="nv">response</span> <span class="o">=</span>&gt; <span class="o">{</span>
+            console.log<span class="o">(</span>response<span class="o">)</span>
+
+var <span class="nv">airport</span> <span class="o">=</span> response.items<span class="o">[</span><span class="m">0</span><span class="o">]</span>.name
+var <span class="nv">num</span> <span class="o">=</span> <span class="m">0</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="nb">let</span> <span class="nv">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> i &lt; airport.length<span class="p">;</span> i++<span class="o">){</span>
+    <span class="k">if</span> <span class="o">(</span>airport<span class="o">[</span>i<span class="o">]</span> <span class="o">==</span> <span class="s2">","</span><span class="o">){</span>
+        <span class="nv">num</span> <span class="o">+=</span> <span class="m">2</span>
+        <span class="nb">break</span>
+    <span class="o">}</span>
+    <span class="nv">num</span> <span class="o">+=</span> <span class="m">1</span>
+<span class="o">}</span>
+
+<span class="nv">airport</span> <span class="o">=</span> airport.slice<span class="o">(</span>num<span class="o">)</span>
+
+// add code to extract airport name and print on the webpage
+
+            const <span class="nv">textDiv</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'text'</span><span class="o">)</span><span class="p">;</span>
+            
+            // const <span class="nv">p</span> <span class="o">=</span> document.createElement<span class="o">(</span><span class="s1">'P'</span><span class="o">)</span><span class="p">;</span>
+            const <span class="nv">pText</span> <span class="o">=</span> document.createTextNode<span class="o">(</span><span class="s2">"Nearest Airport to "</span> + nameField + <span class="s2">": "</span> + airport<span class="o">)</span><span class="p">;</span>
+
+            // textDiv.appendChild<span class="o">(</span>p<span class="o">)</span><span class="p">;</span>
+            p.appendChild<span class="o">(</span>pText<span class="o">)</span><span class="p">;</span>
+            <span class="o">})</span>
+        .catch<span class="o">(</span><span class="nv">err</span> <span class="o">=</span>&gt; console.error<span class="o">(</span>err<span class="o">))</span><span class="p">;</span>
+        <span class="o">})</span>
+	.catch<span class="o">(</span><span class="nv">err</span> <span class="o">=</span>&gt; console.error<span class="o">(</span>err<span class="o">))</span><span class="p">;</span>
+<span class="o">}</span>
+
+var <span class="nv">subButton</span> <span class="o">=</span> document.getElementById<span class="o">(</span><span class="s1">'subButton'</span><span class="o">)</span><span class="p">;</span>
+subButton.addEventListener<span class="o">(</span><span class="s1">'click'</span>, getUserName, <span class="nb">false</span><span class="o">)</span><span class="p">;</span> 
+
+
+
+
+&lt;/script&gt;
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Backend-Code">
+<a class="anchor" href="#Backend-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Backend Code<a class="anchor-link" href="#Backend-Code"> </a>
+</h3>
+<p>The first code cell contains the API which is based on the database model which is in the second code cell. These work together to store data which will be presented to the user with the frontend code (previous code cell).</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>from flask import Blueprint, request, jsonify
+from flask_restful import Api, Resource <span class="c1"># used for REST API building</span>
+
+from model.airportmodel import AirportPost
+
+<span class="nv">airport_api</span> <span class="o">=</span> Blueprint<span class="o">(</span><span class="s1">'airport_api'</span>, __name__,
+                   <span class="nv">url_prefix</span><span class="o">=</span><span class="s1">'/api/airport'</span><span class="o">)</span>
+
+<span class="c1"># API docs https://flask-restful.readthedocs.io/en/latest/api.html</span>
+<span class="nv">api</span> <span class="o">=</span> Api<span class="o">(</span>airport_api<span class="o">)</span>
+
+class AirportPostAPI<span class="o">(</span>Resource<span class="o">)</span>:        
+    class _Create<span class="o">(</span>Resource<span class="o">)</span>:
+        def post<span class="o">(</span>self<span class="o">)</span>:
+            <span class="s1">''' Read data for json body '''</span>
+            <span class="nv">body</span> <span class="o">=</span> request.get_json<span class="o">()</span>
+            
+            <span class="c1"># validate name</span>
+            <span class="nv">city</span> <span class="o">=</span> body.get<span class="o">(</span><span class="s1">'city'</span><span class="o">)</span>
+            <span class="nv">airport</span> <span class="o">=</span> body.get<span class="o">(</span><span class="s1">'airport'</span><span class="o">)</span>
+   
+            <span class="s1">''' #1: Key code block, setup USER OBJECT '''</span>
+            <span class="nv">uo</span> <span class="o">=</span> AirportPost<span class="o">(</span><span class="nv">city</span><span class="o">=</span>city, <span class="nv">airport</span><span class="o">=</span>airport<span class="o">)</span>
+            
+            <span class="s1">''' #2: Key Code block to add user to database '''</span>
+            <span class="c1"># create entry in database</span>
+            <span class="nv">user</span> <span class="o">=</span> uo.create<span class="o">()</span>
+            <span class="c1"># success returns json of entry</span>
+            <span class="k">if</span> user:
+                <span class="k">return</span> jsonify<span class="o">(</span>user.read<span class="o">())</span>
+            <span class="c1"># failure returns error</span>
+            <span class="k">return</span> <span class="o">{</span><span class="s1">'message'</span>: f<span class="s1">'Processed {city}, format error'</span><span class="o">}</span>, <span class="m">210</span>
+
+    class _Read<span class="o">(</span>Resource<span class="o">)</span>:
+        def get<span class="o">(</span>self<span class="o">)</span>:
+            <span class="nv">users</span> <span class="o">=</span> AirportPost.query.all<span class="o">()</span>    <span class="c1"># read/extract all entries from database</span>
+            <span class="nv">json_ready</span> <span class="o">=</span> <span class="o">[</span>user.read<span class="o">()</span> <span class="k">for</span> user in users<span class="o">]</span>  <span class="c1"># prepare output in json</span>
+            <span class="k">return</span> jsonify<span class="o">(</span>json_ready<span class="o">)</span>  <span class="c1"># jsonify creates Flask response object, more specific to APIs than json.dumps</span>
+
+    class _Delete<span class="o">(</span>Resource<span class="o">)</span>:
+        def delete<span class="o">(</span>self<span class="o">)</span>:
+            <span class="s1">''' Read data for json body '''</span>
+            <span class="nv">body</span> <span class="o">=</span> request.get_json<span class="o">()</span>
+            <span class="nv">city</span> <span class="o">=</span> body.get<span class="o">(</span><span class="s1">'city'</span><span class="o">)</span>
+
+            <span class="nv">airports</span> <span class="o">=</span> AirportPost.query.all<span class="o">()</span>    <span class="c1"># read/extract all users from database</span>
+            
+            <span class="c1"># Find the city in the database and call the delete</span>
+            <span class="k">for</span> airport in airports:
+                <span class="k">if</span> airport.city <span class="o">==</span> city:
+                    airport.delete<span class="o">()</span>
+                    <span class="k">return</span>
+            
+            <span class="c1"># delete operation does not return any value</span>
+            <span class="k">return</span> <span class="o">{</span><span class="s1">'message'</span>: f<span class="s1">' {city} is not in database'</span><span class="o">}</span>, <span class="m">210</span>
+
+        
+    <span class="c1"># building RESTapi endpoint</span>
+    api.add_resource<span class="o">(</span>_Create, <span class="s1">'/create'</span><span class="o">)</span>
+    api.add_resource<span class="o">(</span>_Read, <span class="s1">'/'</span><span class="o">)</span>
+    api.add_resource<span class="o">(</span>_Delete, <span class="s1">'/delete'</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span><span class="s2">""" database dependencies to support sqliteDB examples """</span>
+import os
+import json
+from __init__ import app, db
+from sqlalchemy.exc import IntegrityError
+
+class AirportPost<span class="o">(</span>db.Model<span class="o">)</span>:
+    <span class="nv">__tablename__</span> <span class="o">=</span> <span class="s1">'airportposts'</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the User schema with "vars" from object</span>
+    <span class="nv">id</span> <span class="o">=</span> db.Column<span class="o">(</span>db.Integer, <span class="nv">primary_key</span><span class="o">=</span>True<span class="o">)</span>
+    <span class="nv">_city</span> <span class="o">=</span> db.Column<span class="o">(</span>db.String<span class="o">(</span><span class="m">255</span><span class="o">)</span>, <span class="nv">unique</span><span class="o">=</span>True, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>
+    <span class="nv">_airport</span> <span class="o">=</span> db.Column<span class="o">(</span>db.String<span class="o">(</span><span class="m">255</span><span class="o">)</span>, <span class="nv">unique</span><span class="o">=</span>False, <span class="nv">nullable</span><span class="o">=</span>False<span class="o">)</span>
+    
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    def __init__<span class="o">(</span>self, city, airport<span class="o">)</span>:
+        self._city <span class="o">=</span> city    <span class="c1"># variables with self prefix become part of the object, </span>
+        self._airport <span class="o">=</span> airport
+
+    <span class="c1"># a name getter method, extracts name from object</span>
+    @property
+    def city<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._city
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    @city.setter
+    def city<span class="o">(</span>self, city<span class="o">)</span>:
+        self._city <span class="o">=</span> city
+    
+    <span class="c1"># a getter method, extracts email from object</span>
+    @property
+    def airport<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> self._airport
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    @airport.setter
+    def uid<span class="o">(</span>self, airport<span class="o">)</span>:
+        self._airport <span class="o">=</span> airport
+    
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    def __str__<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> json.dumps<span class="o">(</span>self.read<span class="o">())</span>
+
+    <span class="c1"># CRUD create/add a new record to the table</span>
+    <span class="c1"># returns self or None on error</span>
+    def create<span class="o">(</span>self<span class="o">)</span>:
+        try:
+            <span class="c1"># creates a person object from User(db.Model) class, passes initializers</span>
+            db.session.add<span class="o">(</span>self<span class="o">)</span>  <span class="c1"># add prepares to persist person object to Users table</span>
+            db.session.commit<span class="o">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+            <span class="k">return</span> self
+        except IntegrityError:
+            db.session.remove<span class="o">()</span>
+            <span class="k">return</span> None
+
+    <span class="c1"># CRUD read converts self to dictionary</span>
+    <span class="c1"># returns dictionary</span>
+    def read<span class="o">(</span>self<span class="o">)</span>:
+        <span class="k">return</span> <span class="o">{</span>
+            <span class="s2">"city"</span>: self.city,
+            <span class="s2">"airport"</span>: self.airport
+        <span class="o">}</span>
+    
+
+    <span class="c1"># CRUD update: updates user name, password, phone</span>
+    <span class="c1"># returns self</span>
+    def update<span class="o">(</span>self, <span class="nv">city</span><span class="o">=</span><span class="s2">""</span>, <span class="nv">airport</span><span class="o">=</span><span class="s2">""</span><span class="o">)</span>:
+        <span class="s2">"""only updates values with length"""</span>
+        <span class="k">if</span> len<span class="o">(</span>city<span class="o">)</span> &gt; <span class="m">0</span>:
+            self.city <span class="o">=</span> city
+        <span class="k">if</span> len<span class="o">(</span>airport<span class="o">)</span> &gt; <span class="m">0</span>:
+            self.airport <span class="o">=</span> airport
+        db.session.commit<span class="o">()</span>
+        <span class="k">return</span> self
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    def delete<span class="o">(</span>self<span class="o">)</span>:
+        db.session.delete<span class="o">(</span>self<span class="o">)</span>
+        db.session.commit<span class="o">()</span>
+        <span class="k">return</span> None
+
+
+<span class="s2">"""Database Creation and Testing """</span>
+
+
+<span class="c1"># Builds working data for testing</span>
+def initAirports<span class="o">()</span>:
+    with app.app_context<span class="o">()</span>:
+        <span class="s2">"""Create database and tables"""</span>
+        
+        db.create_all<span class="o">()</span>
+        <span class="s2">"""Tester data for table"""</span>
+        <span class="nv">u1</span> <span class="o">=</span> AirportPost<span class="o">(</span><span class="nv">city</span><span class="o">=</span><span class="s2">"Paris"</span>, <span class="nv">airport</span><span class="o">=</span><span class="s2">"Paris-Le Bourget"</span><span class="o">)</span>
+        <span class="nv">u2</span> <span class="o">=</span> AirportPost<span class="o">(</span><span class="nv">city</span><span class="o">=</span><span class="s2">"Berlin"</span>, <span class="nv">airport</span><span class="o">=</span><span class="s2">"Berlin-Tegel"</span><span class="o">)</span>
+
+        <span class="nv">users</span> <span class="o">=</span> <span class="o">[</span>u1, u2<span class="o">]</span>
+        <span class="nv">users</span> <span class="o">=</span> <span class="o">[]</span>
+
+        <span class="s2">"""Builds sample user/note(s) data"""</span>
+        <span class="k">for</span> user in users:
+            try:
+                user.create<span class="o">()</span>
+            except IntegrityError:
+                <span class="s1">'''fails with bad or duplicate data'''</span>
+                db.session.remove<span class="o">()</span>
+                print<span class="o">(</span>f<span class="s2">"Records exist, duplicate email, or error: {user.uid}"</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="sachitcode/fastpages-sachit-blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages-sachit-blog/quintinpartone" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-sachit-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://sachitcode.github.io/fastpages-sachit-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-sachit-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>This is my Fastpages project.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
